@@ -1,0 +1,13 @@
+.test-component {
+  font-family: "inter", sans-serif;
+  background-color: var(--background);
+  color: black;
+  border: 1px solid var(--tariala-black);
+  padding: 16px;
+  width: 360px;
+  text-align: center;
+}
+
+.test-component .heading {
+  font-size: var(--heading-font-size);
+}
