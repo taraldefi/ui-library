@@ -1,3 +1,5 @@
+import React from "react";
 import { ButtonProps } from "./Button.types";
 import "./Button.scss";
-export declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => JSX.Element;
+declare const Button: React.FC<ButtonProps>;
+export default Button;
