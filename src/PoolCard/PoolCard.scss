@@ -5,13 +5,14 @@
   padding: 24px 20px;
   width: 100%;
   display: flex;
-  svg {
-    height: 40px;
-    width: 40px;
-  }
+
   justify-content: space-between;
   .item1 {
     grid-area: icon;
+    img {
+      height: 40px;
+      width: 40px;
+    }
   }
   .item2 {
     grid-area: title;
@@ -65,5 +66,9 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    .button--secondary,
+    .button--primary {
+      width: 130px;
+    }
   }
 }
