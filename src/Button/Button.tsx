@@ -5,13 +5,13 @@ import { ButtonProps } from "./Button.types";
 
 import "./Button.scss";
 
-export const Button = ({
+const Button: React.FC<ButtonProps> = ({
   primary = false,
   size = "medium",
   backgroundColor,
   label,
   ...props
-}: ButtonProps) => {
+}) => {
   const mode = primary ? "button--primary" : "button--secondary";
   return (
     <button
@@ -24,3 +24,5 @@ export const Button = ({
     </button>
   );
 };
+
+export default Button;
