@@ -26,6 +26,7 @@ export default {
     resolve({
       browser: true,
     }),
+    image(),
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
     postcss(),

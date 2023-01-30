@@ -18,6 +18,7 @@ const Button: React.FC<ButtonProps> = ({
       type="button"
       className={["button", `button--${size}`, mode].join(" ")}
       style={{ backgroundColor }}
+      
       {...props}
     >
       {label}

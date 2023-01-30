@@ -4,5 +4,5 @@ module.exports = (componentName) => ({
   color: var(--tariala-green);
 }
 `,
-  extension: `.css`,
+  extension: `.scss`,
 });
