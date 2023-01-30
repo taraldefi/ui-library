@@ -4,4 +4,5 @@ export interface ButtonProps {
     size?: "small" | "medium" | "large";
     label: string;
     onClick?: () => void;
+    disabled?: boolean;
 }

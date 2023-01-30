@@ -1,6 +1,6 @@
 {
   "name": "@icodex-az/tariala-component-library",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
@@ -58,6 +58,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
+    "@svgr/webpack": "^6.5.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.4.0",
@@ -78,6 +79,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-scss": "^4.0.0",
+    "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-typescript2": "^0.34.1",
     "sass": "^1.57.1",
     "sass-loader": "10.1.1",

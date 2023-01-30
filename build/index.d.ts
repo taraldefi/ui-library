@@ -1,3 +1,4 @@
 import TestComponent from "./TestComponent";
 import Button from "./Button";
-export { TestComponent, Button };
+import PoolCard from "./PoolCard";
+export { TestComponent, Button, PoolCard };

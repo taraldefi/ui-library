@@ -1,6 +1,5 @@
 // Generated with util/create-component.js
 import React from "react";
-
 import { PoolCardProps } from "./PoolCard.types";
 import Button from "../Button";
 import "./PoolCard.scss";

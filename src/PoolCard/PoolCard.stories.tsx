@@ -2,6 +2,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import PoolCard from "./PoolCard";
+import logo from "../../assets/logo.svg";
 
 export default {
   title: "Pool Card",
@@ -23,4 +24,5 @@ Card.args = {
   poolStat: "12.15% USDC",
   poolSubstat: "19.28% with GFI",
   poolState: "yield",
+  poolIcon: logo,
 };
