@@ -9,7 +9,7 @@
   "types": "build/index.d.ts",
   "description": "Component library for project tariala",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c --bundleConfigAsCjs",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
