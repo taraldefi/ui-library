@@ -65,13 +65,15 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z$2 = ".button--primary {\n  display: inline-block;\n  border-radius: 5px;\n  border: none;\n  transition: background 150ms;\n  font-family: \"inter\", sans-serif;\n  color: #ffffff;\n  cursor: pointer;\n}\n.button--primary span {\n  font-weight: 500;\n}\n\n.button--secondary {\n  font-family: \"inter\", sans-serif;\n  display: inline-block;\n  border-radius: 5px;\n  border: #0d8489 solid 1px;\n  transition: background 150ms;\n  background: #ffffff;\n  cursor: pointer;\n  color: #1ab98b;\n}\n\n.button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n\n.button--medium {\n  font-size: 12px;\n  padding: 10px 20px;\n}\n\n.button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}";
+var css_248z$2 = ".button--primary {\n  display: flex;\n  border-radius: 5px;\n  border: none;\n  transition: background 150ms;\n  font-family: \"inter\", sans-serif;\n  color: #ffffff;\n  cursor: pointer;\n}\n.button--primary span {\n  font-weight: 500;\n}\n\n.button--container {\n  gap: 5px;\n  display: flex;\n  align-items: center;\n}\n\n.button--secondary {\n  font-family: \"inter\", sans-serif;\n  display: flex;\n  border-radius: 5px;\n  border: #0d8489 solid 1px;\n  transition: background 150ms;\n  background: #ffffff;\n  cursor: pointer;\n  color: #1ab98b;\n}\n\n.button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n\n.button--medium {\n  font-size: 12px;\n  padding: 10px 20px;\n}\n\n.button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}";
 styleInject(css_248z$2);
 
 var Button = function (_a) {
-    var _b = _a.primary, primary = _b === void 0 ? false : _b, _c = _a.size, size = _c === void 0 ? "medium" : _c, backgroundColor = _a.backgroundColor, label = _a.label, props = __rest(_a, ["primary", "size", "backgroundColor", "label"]);
+    var _b = _a.primary, primary = _b === void 0 ? false : _b, _c = _a.size, size = _c === void 0 ? "medium" : _c, backgroundColor = _a.backgroundColor, label = _a.label, icon = _a.icon, props = __rest(_a, ["primary", "size", "backgroundColor", "label", "icon"]);
     var mode = primary ? "button--primary" : "button--secondary";
-    return (React.createElement("button", __assign({ type: "button", className: ["button", "button--".concat(size), mode].join(" "), style: { backgroundColor: backgroundColor } }, props), label));
+    return (React.createElement("button", __assign({ type: "button", className: ["button--container", "button--".concat(size), mode].join(" "), style: { backgroundColor: backgroundColor } }, props),
+        label,
+        icon));
 };
 
 var css_248z$1 = ".pool-card--container {\n  font-family: \"inter\", sans-serif;\n  background-color: #fff;\n  border-radius: 8px;\n  padding: 24px 20px;\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n}\n.pool-card--container .item1 {\n  grid-area: icon;\n}\n.pool-card--container .item1 img {\n  height: 40px;\n  width: 40px;\n}\n.pool-card--container .item2 {\n  grid-area: title;\n  font-weight: bold;\n  font-size: 14px;\n  color: #003c6e;\n}\n.pool-card--container .item3 {\n  grid-area: desc;\n  font-weight: normal;\n  font-size: small;\n  color: #003c6e;\n}\n.pool-card--container .pool--title {\n  display: grid;\n  grid-template-areas: \"icon title\" \"icon desc\";\n  gap: 0px 20px;\n}\n.pool-card--container .pool--stats {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n}\n.pool-card--container .pool--stats svg {\n  height: 15px;\n  width: 15px;\n}\n.pool-card--container .pool--stats :nth-child(1) {\n  font-weight: bold;\n  font-size: 14px;\n  color: #003c6e;\n}\n.pool-card--container .pool--stats :nth-child(2) {\n  display: flex;\n  gap: 2px;\n  font-weight: normal;\n  font-size: small;\n  color: #003c6e;\n}\n.pool-card--container .pool--button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n}\n.pool-card--container .pool--button .button--secondary,\n.pool-card--container .pool--button .button--primary {\n  width: 130px;\n}";
@@ -1332,7 +1334,7 @@ var PoolCard = function (_a) {
             React.createElement(Button, __assign({ disabled: poolState == "closed" || poolState == "full", backgroundColor: poolState == "yield" ? "#1ab98b" : "#d70b48", primary: true, label: poolState }, props)))));
 };
 
-var css_248z = ".status {\n  font-family: \"Inter\", sans-serif;\n  align-items: center;\n  border-radius: 50px;\n  text-align: center;\n  font-size: 14px;\n  padding-left: 10px;\n  padding-right: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n}\n\n.status--without--icon {\n  width: auto;\n  height: auto;\n}\n\n.status--with--icon {\n  width: -moz-min-content;\n  width: min-content;\n  height: -moz-min-content;\n  height: min-content;\n  margin: 0px;\n  display: flex;\n  justify-content: center;\n  font-weight: 400;\n}\n.status--with--icon svg {\n  padding: 0px;\n  margin: 0px;\n  width: 15px;\n  height: 15px;\n  margin-right: 8px;\n}";
+var css_248z = ".status {\n  font-family: \"Inter\", sans-serif;\n  align-items: center;\n  border-radius: 50px;\n  text-align: center;\n  font-size: 14px;\n  padding-left: 10px;\n  padding-right: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n}\n\n.status--without--icon {\n  width: auto;\n  height: auto;\n}\n\n.status--with--icon {\n  width: -moz-min-content;\n  width: min-content;\n  height: -moz-min-content;\n  height: min-content;\n  margin: 0px;\n  display: flex;\n  justify-content: center;\n  font-weight: 400;\n}\n.status--with--icon svg {\n  padding: 0px;\n  margin: 0px;\n  width: 15px;\n  height: 15px;\n  margin-right: 8px;\n}\n\n.progressbar {\n  font-family: \"Inter\", sans-serif;\n  margin-top: 5px;\n  background-color: rgba(5, 17, 19, 0.2);\n  border-radius: 5px;\n  height: 10px;\n  width: 177px;\n}\n\n.progressbar--done {\n  font-family: \"Inter\", sans-serif;\n  border-radius: 20px;\n  color: #fff;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 0;\n  opacity: 0;\n  transition: 1s ease 0.3s;\n}\n\n.slider--container {\n  width: 100%;\n}\n.slider--container .slider {\n  z-index: 0;\n  -webkit-appearance: none;\n  width: 100%;\n  height: 10px;\n  border-radius: 5px;\n  background: linear-gradient(to right, rgba(239, 68, 68, 0.5), rgba(122, 109, 87, 0.15), rgba(5, 150, 105, 0.5));\n  outline: none;\n  opacity: 1;\n  transition: opacity 0.15s ease-in-out;\n}\n.slider--container .slider::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  appearance: none;\n  width: 16px;\n  height: 16px;\n  border: 2px solid #81cfdb;\n  border-radius: 50%;\n  background: white;\n  cursor: pointer;\n}\n.slider--container .slider::-moz-range-thumb {\n  -moz-appearance: none;\n       appearance: none;\n  width: 16px;\n  height: 16px;\n  border: 2px solid #81cfdb;\n  border-radius: 50%;\n  background: white;\n  cursor: pointer;\n}";
 styleInject(css_248z);
 
 // Generated with util/create-component.js
@@ -1408,6 +1410,31 @@ function StatusWidget(_a) {
         showIcon ? icon : "",
         type));
 }
+function ProgressBar(_a) {
+    var progress = _a.progress, color = _a.color, showText = _a.showText;
+    var _b = React.useState({}), style = _b[0], setStyle = _b[1];
+    setTimeout(function () {
+        var newStyle = {
+            opacity: 1,
+            width: "".concat(progress, "%"),
+            backgroundColor: color,
+        };
+        setStyle(newStyle);
+    }, 100);
+    return (React.createElement("div", null,
+        showText ? React.createElement("span", null,
+            "Overall Progress: ",
+            progress,
+            "%") : "",
+        React.createElement("div", { className: "progressbar" },
+            React.createElement("div", { className: "progressbar--done", style: style }))));
+}
+var MetricRange = function (_a) {
+    var value = _a.value;
+    return (React.createElement(React.Fragment, null,
+        React.createElement("div", { className: "slider--container" },
+            React.createElement("input", { className: "slider", type: "range", min: "1", max: "100", value: value }))));
+};
 
-export { Button, PoolCard, StatusWidget };
+export { Button, MetricRange, PoolCard, ProgressBar, StatusWidget };
 //# sourceMappingURL=index.esm.js.map

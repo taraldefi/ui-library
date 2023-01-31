@@ -1,3 +1,4 @@
+import React from "react";
 export interface ButtonProps {
     primary?: boolean;
     backgroundColor?: string;
@@ -5,4 +6,5 @@ export interface ButtonProps {
     label: string;
     onClick?: () => void;
     disabled?: boolean;
+    icon?: React.ReactNode;
 }
