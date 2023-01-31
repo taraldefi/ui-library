@@ -1334,7 +1334,7 @@ var PoolCard = function (_a) {
             React.createElement(Button, __assign({ disabled: poolState == "closed" || poolState == "full", backgroundColor: poolState == "yield" ? "#1ab98b" : "#d70b48", primary: true, label: poolState }, props)))));
 };
 
-var css_248z = ".status {\n  font-family: \"Inter\", sans-serif;\n  width: auto;\n  align-items: center;\n  height: auto;\n  border-radius: 50px;\n  text-align: center;\n  font-size: 14px;\n  padding-left: 10px;\n  padding-right: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n}\n.status :nth-child(1) {\n  padding: 0px;\n  margin: 0px;\n  width: 15px;\n  height: 15px;\n  margin-right: 8px;\n}";
+var css_248z = ".status {\n  font-family: \"Inter\", sans-serif;\n  align-items: center;\n  border-radius: 50px;\n  text-align: center;\n  font-size: 14px;\n  padding-left: 10px;\n  padding-right: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n}\n\n.status--without--icon {\n  width: auto;\n  height: auto;\n}\n\n.status--with--icon {\n  width: -moz-min-content;\n  width: min-content;\n  height: -moz-min-content;\n  height: min-content;\n  margin: 0px;\n  display: flex;\n  justify-content: center;\n  font-weight: 400;\n}\n.status--with--icon svg {\n  padding: 0px;\n  margin: 0px;\n  width: 15px;\n  height: 15px;\n  margin-right: 8px;\n}";
 styleInject(css_248z);
 
 // Generated with util/create-component.js
@@ -1359,6 +1359,7 @@ var colorHash = {
 function StatusWidget(_a) {
     var type = _a.type, icon = _a.icon, showIcon = _a.showIcon;
     var _b = React.useState({}), style = _b[0], setStyle = _b[1];
+    var mode = showIcon ? "status--with--icon" : "status--without--icon";
     React.useEffect(function () {
         switch (type.toLowerCase()) {
             case "up":
@@ -1405,7 +1406,7 @@ function StatusWidget(_a) {
                 break;
         }
     }, [type]);
-    return (React.createElement("div", { className: "status", style: style },
+    return (React.createElement("div", { className: ["status", mode].join(" "), style: style },
         showIcon ? icon : "",
         type));
 }

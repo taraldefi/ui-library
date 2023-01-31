@@ -1,7 +1,11 @@
 // Generated with util/create-component.js
 import React, { useEffect, useState } from "react";
 
-import { StatusWidgetProps } from "./Widgets.types";
+import {
+  StatusWidgetProps,
+  ProgressBarWidgetProps,
+  MetricProps,
+} from "./Widgets.types";
 
 import "./Widgets.scss";
 
@@ -24,7 +28,7 @@ const colorHash = {
   },
 };
 
-function StatusWidget({ type, icon, showIcon }: StatusWidgetProps) {
+export function StatusWidget({ type, icon, showIcon }: StatusWidgetProps) {
   const [style, setStyle] = useState({});
   const mode = showIcon ? "status--with--icon" : "status--without--icon";
   useEffect(() => {
@@ -83,4 +87,45 @@ function StatusWidget({ type, icon, showIcon }: StatusWidgetProps) {
   );
 }
 
-export default StatusWidget;
+export function ProgressBar({
+  progress,
+  color,
+  showText,
+}: ProgressBarWidgetProps) {
+  const [style, setStyle] = React.useState({});
+
+  setTimeout(() => {
+    const newStyle = {
+      opacity: 1,
+      width: `${progress}%`,
+      backgroundColor: color,
+    };
+
+    setStyle(newStyle);
+  }, 100);
+
+  return (
+    <div>
+      {showText ? <span>Overall Progress: {progress}%</span> : ""}
+      <div className="progressbar">
+        <div className="progressbar--done" style={style}></div>
+      </div>
+    </div>
+  );
+}
+
+export const MetricRange = ({ value }: MetricProps) => {
+  return (
+    <>
+      <div className="slider--container">
+        <input
+          className="slider"
+          type="range"
+          min="1"
+          max="100"
+          value={value}
+        />
+      </div>
+    </>
+  );
+};

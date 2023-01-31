@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-
+import { Plus } from "react-feather";
 import Button from "./Button";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -27,6 +27,12 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: "New Entity",
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  label: "Add",
+  icon: <Plus size="15px"></Plus>,
 };
 
 export const Large = Template.bind({});

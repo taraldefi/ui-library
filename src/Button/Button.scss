@@ -1,5 +1,5 @@
 .button--primary {
-  display: inline-block;
+  display: flex;
   border-radius: 5px;
   border: none;
   transition: background 150ms;
@@ -10,10 +10,14 @@
     font-weight: 500;
   }
 }
-
+.button--container {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
 .button--secondary {
   font-family: "inter", sans-serif;
-  display: inline-block;
+  display: flex;
   border-radius: 5px;
   border: #0d8489 solid 1px;
   transition: background 150ms;

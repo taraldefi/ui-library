@@ -6,3 +6,13 @@ export interface StatusWidgetProps {
   icon?: React.ReactNode;
   showIcon: boolean;
 }
+
+export interface ProgressBarWidgetProps {
+  progress: number;
+  color: string;
+  showText: boolean;
+}
+
+export interface MetricProps {
+  value: number;
+}
