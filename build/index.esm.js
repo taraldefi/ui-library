@@ -1,41 +1,4 @@
-import React, { forwardRef } from 'react';
-
-function styleInject(css, ref) {
-  if ( ref === void 0 ) ref = {};
-  var insertAt = ref.insertAt;
-
-  if (!css || typeof document === 'undefined') { return; }
-
-  var head = document.head || document.getElementsByTagName('head')[0];
-  var style = document.createElement('style');
-  style.type = 'text/css';
-
-  if (insertAt === 'top') {
-    if (head.firstChild) {
-      head.insertBefore(style, head.firstChild);
-    } else {
-      head.appendChild(style);
-    }
-  } else {
-    head.appendChild(style);
-  }
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    style.appendChild(document.createTextNode(css));
-  }
-}
-
-var css_248z$2 = ".test-component {\n  font-family: \"inter\", sans-serif;\n  background-color: var(--background);\n  color: black;\n  border: 1px solid var(--tariala-black);\n  padding: 16px;\n  width: 360px;\n  text-align: center;\n}\n\n.test-component .heading {\n  font-size: var(--heading-font-size);\n}";
-styleInject(css_248z$2);
-
-var TestComponent = function (_a) {
-    var heading = _a.heading, content = _a.content;
-    return (React.createElement("div", { "data-testid": "test-component", className: "test-component" },
-        React.createElement("h1", { "data-testid": "test-component__heading", className: "heading" }, heading),
-        React.createElement("div", { "data-testid": "test-component__content" }, content)));
-};
+import React, { forwardRef, useState, useEffect } from 'react';
 
 /******************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -75,8 +38,35 @@ function __rest(s, e) {
     return t;
 }
 
-var css_248z$1 = ".button--primary {\n  display: inline-block;\n  border-radius: 5px;\n  border: none;\n  transition: background 150ms;\n  font-family: \"inter\", sans-serif;\n  color: #ffffff;\n  cursor: pointer;\n}\n.button--primary span {\n  font-weight: 500;\n}\n\n.button--secondary {\n  font-family: \"inter\", sans-serif;\n  display: inline-block;\n  border-radius: 5px;\n  border: #0d8489 solid 1px;\n  transition: background 150ms;\n  background: #ffffff;\n  cursor: pointer;\n  color: #1ab98b;\n}\n\n.button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n\n.button--medium {\n  font-size: 12px;\n  padding: 10px 20px;\n}\n\n.button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}";
-styleInject(css_248z$1);
+function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var css_248z$2 = ".button--primary {\n  display: inline-block;\n  border-radius: 5px;\n  border: none;\n  transition: background 150ms;\n  font-family: \"inter\", sans-serif;\n  color: #ffffff;\n  cursor: pointer;\n}\n.button--primary span {\n  font-weight: 500;\n}\n\n.button--secondary {\n  font-family: \"inter\", sans-serif;\n  display: inline-block;\n  border-radius: 5px;\n  border: #0d8489 solid 1px;\n  transition: background 150ms;\n  background: #ffffff;\n  cursor: pointer;\n  color: #1ab98b;\n}\n\n.button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n\n.button--medium {\n  font-size: 12px;\n  padding: 10px 20px;\n}\n\n.button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}";
+styleInject(css_248z$2);
 
 var Button = function (_a) {
     var _b = _a.primary, primary = _b === void 0 ? false : _b, _c = _a.size, size = _c === void 0 ? "medium" : _c, backgroundColor = _a.backgroundColor, label = _a.label, props = __rest(_a, ["primary", "size", "backgroundColor", "label"]);
@@ -84,8 +74,8 @@ var Button = function (_a) {
     return (React.createElement("button", __assign({ type: "button", className: ["button", "button--".concat(size), mode].join(" "), style: { backgroundColor: backgroundColor } }, props), label));
 };
 
-var css_248z = ".pool-card--container {\n  font-family: \"inter\", sans-serif;\n  background-color: #fff;\n  border-radius: 8px;\n  padding: 24px 20px;\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n}\n.pool-card--container .item1 {\n  grid-area: icon;\n}\n.pool-card--container .item1 img {\n  height: 40px;\n  width: 40px;\n}\n.pool-card--container .item2 {\n  grid-area: title;\n  font-weight: bold;\n  font-size: 14px;\n  color: #003c6e;\n}\n.pool-card--container .item3 {\n  grid-area: desc;\n  font-weight: normal;\n  font-size: small;\n  color: #003c6e;\n}\n.pool-card--container .pool--title {\n  display: grid;\n  grid-template-areas: \"icon title\" \"icon desc\";\n  gap: 0px 20px;\n}\n.pool-card--container .pool--stats {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n}\n.pool-card--container .pool--stats svg {\n  height: 15px;\n  width: 15px;\n}\n.pool-card--container .pool--stats :nth-child(1) {\n  font-weight: bold;\n  font-size: 14px;\n  color: #003c6e;\n}\n.pool-card--container .pool--stats :nth-child(2) {\n  display: flex;\n  gap: 2px;\n  font-weight: normal;\n  font-size: small;\n  color: #003c6e;\n}\n.pool-card--container .pool--button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n}\n.pool-card--container .pool--button .button--secondary,\n.pool-card--container .pool--button .button--primary {\n  width: 130px;\n}";
-styleInject(css_248z);
+var css_248z$1 = ".pool-card--container {\n  font-family: \"inter\", sans-serif;\n  background-color: #fff;\n  border-radius: 8px;\n  padding: 24px 20px;\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n}\n.pool-card--container .item1 {\n  grid-area: icon;\n}\n.pool-card--container .item1 img {\n  height: 40px;\n  width: 40px;\n}\n.pool-card--container .item2 {\n  grid-area: title;\n  font-weight: bold;\n  font-size: 14px;\n  color: #003c6e;\n}\n.pool-card--container .item3 {\n  grid-area: desc;\n  font-weight: normal;\n  font-size: small;\n  color: #003c6e;\n}\n.pool-card--container .pool--title {\n  display: grid;\n  grid-template-areas: \"icon title\" \"icon desc\";\n  gap: 0px 20px;\n}\n.pool-card--container .pool--stats {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n}\n.pool-card--container .pool--stats svg {\n  height: 15px;\n  width: 15px;\n}\n.pool-card--container .pool--stats :nth-child(1) {\n  font-weight: bold;\n  font-size: 14px;\n  color: #003c6e;\n}\n.pool-card--container .pool--stats :nth-child(2) {\n  display: flex;\n  gap: 2px;\n  font-weight: normal;\n  font-size: small;\n  color: #003c6e;\n}\n.pool-card--container .pool--button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n}\n.pool-card--container .pool--button .button--secondary,\n.pool-card--container .pool--button .button--primary {\n  width: 130px;\n}";
+styleInject(css_248z$1);
 
 var propTypesExports = {};
 var propTypes = {
@@ -1342,5 +1332,81 @@ var PoolCard = function (_a) {
             React.createElement(Button, __assign({ disabled: poolState == "closed" || poolState == "full", backgroundColor: poolState == "yield" ? "#1ab98b" : "#d70b48", primary: true, label: poolState }, props)))));
 };
 
-export { Button, PoolCard, TestComponent };
+var css_248z = ".status {\n  font-family: \"Inter\", sans-serif;\n  width: auto;\n  align-items: center;\n  height: auto;\n  border-radius: 50px;\n  text-align: center;\n  font-size: 14px;\n  padding-left: 10px;\n  padding-right: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n}\n.status :nth-child(1) {\n  padding: 0px;\n  margin: 0px;\n  width: 15px;\n  height: 15px;\n  margin-right: 8px;\n}";
+styleInject(css_248z);
+
+// Generated with util/create-component.js
+var colorHash = {
+    active: {
+        bgcolor: "#D1FAE5",
+        color: "#059669",
+    },
+    change: {
+        bgcolor: "#FEE2E2",
+        color: "#EF4444",
+    },
+    review: {
+        bgcolor: "#FEF3C7",
+        color: "#F59E0B",
+    },
+    completed: {
+        bgcolor: "#10B981",
+        color: "#ECFDF5",
+    },
+};
+function StatusWidget(_a) {
+    var type = _a.type, icon = _a.icon, showIcon = _a.showIcon;
+    var _b = useState({}), style = _b[0], setStyle = _b[1];
+    useEffect(function () {
+        switch (type.toLowerCase()) {
+            case "up":
+                setStyle({
+                    opacity: 1,
+                    backgroundColor: colorHash.active.bgcolor,
+                    color: colorHash.active.color,
+                });
+                break;
+            case "down":
+                setStyle({
+                    opacity: 1,
+                    backgroundColor: colorHash.change.bgcolor,
+                    color: colorHash.change.color,
+                });
+                break;
+            case "change" :
+                setStyle({
+                    opacity: 1,
+                    backgroundColor: colorHash.change.bgcolor,
+                    color: colorHash.change.color,
+                });
+                break;
+            case "review":
+                setStyle({
+                    opacity: 1,
+                    backgroundColor: colorHash.review.bgcolor,
+                    color: colorHash.review.color,
+                });
+                break;
+            case "completed":
+                setStyle({
+                    opacity: 1,
+                    backgroundColor: colorHash.completed.bgcolor,
+                    color: colorHash.completed.color,
+                });
+                break;
+            default:
+                setStyle({
+                    opacity: 1,
+                    backgroundColor: colorHash.active.bgcolor,
+                    color: colorHash.active.color,
+                });
+                break;
+        }
+    }, [type]);
+    return (React.createElement("div", { className: "status", style: style },
+        showIcon ? icon : "",
+        type));
+}
+
+export { Button, PoolCard, StatusWidget };
 //# sourceMappingURL=index.esm.js.map

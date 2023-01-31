@@ -1,9 +1,7 @@
 // Generated with util/create-component.js
 .status {
   font-family: "Inter", sans-serif;
-  width: auto;
   align-items: center;
-  height: auto;
   border-radius: 50px;
   text-align: center;
   font-size: 14px;
@@ -11,8 +9,23 @@
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
+}
 
-  :nth-child(1) {
+.status--without--icon {
+  width: auto;
+  height: auto;
+}
+
+.status--with--icon {
+  width: min-content;
+  height: min-content;
+  margin: 0px;
+
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+
+  svg {
     padding: 0px;
     margin: 0px;
     width: 15px;

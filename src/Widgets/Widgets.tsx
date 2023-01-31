@@ -26,6 +26,7 @@ const colorHash = {
 
 function StatusWidget({ type, icon, showIcon }: StatusWidgetProps) {
   const [style, setStyle] = useState({});
+  const mode = showIcon ? "status--with--icon" : "status--without--icon";
   useEffect(() => {
     switch (type.toLowerCase()) {
       case "up":
@@ -75,7 +76,7 @@ function StatusWidget({ type, icon, showIcon }: StatusWidgetProps) {
   }, [type]);
 
   return (
-    <div className="status" style={style}>
+    <div className={["status", mode].join(" ")} style={style}>
       {showIcon ? icon : ""}
       {type}
     </div>

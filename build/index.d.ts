@@ -1,4 +1,4 @@
-import TestComponent from "./TestComponent";
 import Button from "./Button";
 import PoolCard from "./PoolCard";
-export { TestComponent, Button, PoolCard };
+import StatusWidget from "./Widgets";
+export { Button, PoolCard, StatusWidget };
