@@ -6,65 +6,69 @@ import { applicationTableType, entityTableType } from "./Table.types";
 import "./Table.scss";
 
 export const ApplicationTable: React.FC<applicationTableType> = ({ applicationTableData }) => (
-    <div className="Application--Table">
-        <div className="title--Row">
-            {[
-                "Application ID",
-                "Product",
-                "Date From",
-                "Date To",
-                "Importer ID",
-                "Importer Name",
-                "Status",
-            ].map((item, index) => {
+    <div className="table">
+        <table >
+            <tr className="title--row">
+                {[
+                    "Application ID",
+                    "Product",
+                    "Date From",
+                    "Date To",
+                    "Importer ID",
+                    "Importer Name",
+                    "Status",
+                ].map((item, index) => {
+                    return (
+                        <th key={index} className="title--headder">
+                            {item}
+                        </th>
+                    );
+                })}
+            </tr>
+            {applicationTableData.map((item, index) => {
                 return (
-                    <div key={index} className="title--Headder">
-                        {item}
-                    </div>
+                    <tr key={index} className="table--content">
+                        <td className="app--table--items">{item.applicationId}</td>
+                        <td className="app--table--items">{item.product}</td>
+                        <td className="app--table--items">{item.dateFrom}</td>
+                        <td className="app--table--items">{item.dateTo}</td>
+                        <td className="app--table--items">{item.importerId}</td>
+                        <td className="app--table--items">{item.importerName}</td>
+                        <td className="app--table--items">{item.status}</td>
+                    </tr>
                 );
             })}
-        </div>
-        {applicationTableData.map((item, index) => {
-            return (
-                <div key={index} className="table--Content">
-                    <div className="app--Table--Items">{item.applicationId}</div>
-                    <div className="app--Table--Items">{item.product}</div>
-                    <div className="app--Table--Items">{item.dateFrom}</div>
-                    <div className="app--Table--Items">{item.dateTo}</div>
-                    <div className="app--Table--Items">{item.importerId}</div>
-                    <div className="app--Table--Items">{item.importerName}</div>
-                    <div className="app--Table--Items">{item.status}</div>
-                </div>
-            );
-        })}
+        </table>
     </div>
 );
 
 export const EntityTable: React.FC<entityTableType> = ({ EntityTableData }) => (
-    <div className="table--Entity">
-        <div className="table--Titles">
-            <div className="status--Title">
+    <div className="table">
+        <table >
+
+            <tr className="status--title">
                 {["Title", "Issuance Date", "Maturity Date", "Facility Amount"].map(
                     (item, index) => {
                         return (
-                            <div key={index} className="status--Title--Items">
+                            <th key={index} className="status--title--items">
                                 {item}
-                            </div>
+                            </th>
                         );
                     }
                 )}
-            </div>
-        </div>
-        {EntityTableData.map((item, index) => {
-            return (
-                <div className="table--Content" key={index}>
-                    <div className="persons--Tab">{item.productTitle}</div>
-                    <div className="details--Tab">{item.issuanceDate}</div>
-                    <div className="source--Tab">{item.maturityDate}</div>
-                    <div className="status--Tab">{item.facilityAmount}</div>
-                </div>
-            );
-        })}
+            </tr>
+
+            {EntityTableData.map((item, index) => {
+                return (
+                    <tr className="table--Content" key={index}>
+                        <td className="persons--tab">{item.productTitle}</td>
+                        <td className="details--tab">{item.issuanceDate}</td>
+                        <td className="source--tab">{item.maturityDate}</td>
+                        <td className="status--tab">{item.facilityAmount}</td>
+                    </tr>
+                );
+            })}
+        </table>
     </div>
 )
 
