@@ -73,7 +73,7 @@ styleInject(css_248z$2);
 var Button = function (_a) {
     var _b = _a.primary, primary = _b === void 0 ? false : _b, _c = _a.size, size = _c === void 0 ? "medium" : _c, backgroundColor = _a.backgroundColor, label = _a.label, icon = _a.icon, props = __rest(_a, ["primary", "size", "backgroundColor", "label", "icon"]);
     var mode = primary ? "button--primary" : "button--secondary";
-    return (React.createElement("button", __assign({ type: "button", className: ["button--container", "button--".concat(size), mode].join(" "), style: { backgroundColor: backgroundColor } }, props),
+    return (React.createElement("button", __assign({ type: "submit", className: ["button--container", "button--".concat(size), mode].join(" "), style: { backgroundColor: backgroundColor } }, props),
         label,
         icon));
 };
