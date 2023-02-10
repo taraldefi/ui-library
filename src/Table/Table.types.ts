@@ -20,5 +20,16 @@ export interface entityTableDataType {
 }
 
 export interface entityTableType {
-  EntityTableData: entityTableDataType[];
+  entityTableData: entityTableDataType[];
+}
+
+export interface companyTableDataType {
+  persons: string;
+  details: string;
+  source: string;
+  status: boolean;
+}
+
+export interface companyTableType {
+  companyTableData: companyTableDataType[];
 }

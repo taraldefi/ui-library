@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from "react";
-
-import { applicationTableType, entityTableType } from "./Table.types";
-
+import { CheckSquare, Square, ExternalLink } from "react-feather";
+import { applicationTableType, entityTableType, companyTableType } from "./Table.types";
 import "./Table.scss";
+
 
 export const ApplicationTable: React.FC<applicationTableType> = ({ applicationTableData }) => (
     <div className="table">
@@ -42,7 +42,7 @@ export const ApplicationTable: React.FC<applicationTableType> = ({ applicationTa
     </div>
 );
 
-export const EntityTable: React.FC<entityTableType> = ({ EntityTableData }) => (
+export const EntityTable: React.FC<entityTableType> = ({ entityTableData }) => (
     <div className="table">
         <table >
 
@@ -58,7 +58,7 @@ export const EntityTable: React.FC<entityTableType> = ({ EntityTableData }) => (
                 )}
             </tr>
 
-            {EntityTableData.map((item, index) => {
+            {entityTableData.map((item, index) => {
                 return (
                     <tr className="table--Content" key={index}>
                         <td className="persons--tab">{item.productTitle}</td>
@@ -70,7 +70,52 @@ export const EntityTable: React.FC<entityTableType> = ({ EntityTableData }) => (
             })}
         </table>
     </div>
-)
+);
 
+export const CompanyTable: React.FC<companyTableType> = ({ companyTableData }) => (
 
+    <div className="table">
+        <table >
+            <tr className="status--title">
+                {/* <div className="statusTitle"> */}
+                {["Persons", "Details", "Source", "Status"].map((item, index) => {
+                    return (
+                        <th key={index} className="statusTitleItems">
+                            {item}
+                        </th>
+                    );
+                })}
+                {/* </div> */}
+            </tr>
+            {companyTableData.map((item, index) => {
+                return (
+                    <tr className="tableContent" key={index}>
+                        <td className="details--tab">{item.persons}</td>
+                        <td className="persons--tab" >{item.details}</td>
+                        <td className="source--tab">
+                            <a href={item.source} >
+                                {item.source}
+                            </a>
+                            <ExternalLink color="#0BD7A4" />
+                        </td>
+                        <td className="status--tab">
+                            {item.status ? (
+                                <div className="svg--icon">
+                                    <CheckSquare color="#0BD7A4" />
+                                    <span className="selected">Verified</span>
+                                </div>
+                            ) : (
+                                <div className="svg--icon">
+                                    <Square color="#CBD5E1" />
+                                    <span className="not--selected">Verified</span>
+                                </div>
+                            )}
+                        </td>
+                    </tr>
+                );
+            })}
+        </table>
+
+    </div>
+);
 

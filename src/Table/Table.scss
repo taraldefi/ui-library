@@ -96,14 +96,16 @@
 //   }
 // }
 .table {
+  font-family: "inter", sans-serif;
   margin-top: 30px;
+
   table {
     border-collapse: separate;
     border-spacing: 0;
     min-width: 350px;
   }
 
-  table tr ,
+  table tr,
   table tr td {
     border-bottom: 1px solid #E2E8F0;
     padding: 25px;
@@ -128,7 +130,7 @@
     border-top: solid 1px #E2E8F0;
     font-size: small;
     font-weight: bold;
-    color: #475569; 
+    color: #475569;
   }
 
   /* top-left border-radius */
@@ -157,11 +159,42 @@
   table tr td:last-child {
     border-right: 1px solid #E2E8F0;
   }
-  table tr td{
+
+  table tr td {
     background: #ffffff;
     font-size: 14px;
   }
-  .persons--tab{
-    width: 300px;
+
+  .persons--tab {
+    width: 400px;
+  }
+
+  .svg--icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .selected {
+      font-weight: bold;
+    }
+
+    .not--selected {
+      font-weight: normal;
+      color: #CBD5E1;
+    }
+  }
+
+  .source--tab {
+    a {
+      text-align: bottom;
+      font-weight: bold;
+      font-size: 13px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 }
