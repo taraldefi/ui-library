@@ -67,8 +67,8 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z$2 = ".button--primary {\n  display: flex;\n  border-radius: 5px;\n  border: none;\n  transition: background 150ms;\n  font-family: \"inter\", sans-serif;\n  color: #ffffff;\n  cursor: pointer;\n}\n.button--primary span {\n  font-weight: 500;\n}\n\n.button--container {\n  gap: 5px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.button--secondary {\n  font-family: \"inter\", sans-serif;\n  display: flex;\n  border-radius: 5px;\n  border: #0d8489 solid 1px;\n  transition: background 150ms;\n  background: #ffffff;\n  cursor: pointer;\n  color: #1ab98b;\n}\n\n.button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n\n.button--medium {\n  font-size: 12px;\n  padding: 10px 20px;\n}\n\n.button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}";
-styleInject(css_248z$2);
+var css_248z$3 = ".button--primary {\n  display: flex;\n  border-radius: 5px;\n  border: none;\n  transition: background 150ms;\n  font-family: \"inter\", sans-serif;\n  color: #ffffff;\n  cursor: pointer;\n}\n.button--primary span {\n  font-weight: 500;\n}\n\n.button--container {\n  gap: 5px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.button--secondary {\n  font-family: \"inter\", sans-serif;\n  display: flex;\n  border-radius: 5px;\n  border: #0d8489 solid 1px;\n  transition: background 150ms;\n  background: #ffffff;\n  cursor: pointer;\n  color: #1ab98b;\n}\n\n.button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n\n.button--medium {\n  font-size: 12px;\n  padding: 10px 20px;\n}\n\n.button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}";
+styleInject(css_248z$3);
 
 var Button = function (_a) {
     var _b = _a.primary, primary = _b === void 0 ? false : _b, _c = _a.size, size = _c === void 0 ? "medium" : _c, backgroundColor = _a.backgroundColor, label = _a.label, icon = _a.icon, props = __rest(_a, ["primary", "size", "backgroundColor", "label", "icon"]);
@@ -78,8 +78,8 @@ var Button = function (_a) {
         icon));
 };
 
-var css_248z$1 = ".pool-card--container {\n  font-family: \"inter\", sans-serif;\n  background-color: #fff;\n  border-radius: 8px;\n  padding: 24px 20px;\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n}\n.pool-card--container .item1 {\n  grid-area: icon;\n}\n.pool-card--container .item1 img {\n  height: 40px;\n  width: 40px;\n}\n.pool-card--container .item2 {\n  grid-area: title;\n  font-weight: bold;\n  font-size: 14px;\n  color: #003c6e;\n}\n.pool-card--container .item3 {\n  grid-area: desc;\n  font-weight: normal;\n  font-size: small;\n  color: #003c6e;\n}\n.pool-card--container .pool--title {\n  display: grid;\n  grid-template-areas: \"icon title\" \"icon desc\";\n  gap: 0px 20px;\n}\n.pool-card--container .pool--stats {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n}\n.pool-card--container .pool--stats svg {\n  height: 15px;\n  width: 15px;\n}\n.pool-card--container .pool--stats :nth-child(1) {\n  font-weight: bold;\n  font-size: 14px;\n  color: #003c6e;\n}\n.pool-card--container .pool--stats :nth-child(2) {\n  display: flex;\n  gap: 2px;\n  font-weight: normal;\n  font-size: small;\n  color: #003c6e;\n}\n.pool-card--container .pool--button {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.pool-card--container .pool--button .button--secondary,\n.pool-card--container .pool--button .button--primary {\n  width: 130px;\n}";
-styleInject(css_248z$1);
+var css_248z$2 = ".pool-card--container {\n  font-family: \"inter\", sans-serif;\n  background-color: #fff;\n  border-radius: 8px;\n  padding: 24px 20px;\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n}\n.pool-card--container .item1 {\n  grid-area: icon;\n}\n.pool-card--container .item1 img {\n  height: 40px;\n  width: 40px;\n}\n.pool-card--container .item2 {\n  grid-area: title;\n  font-weight: bold;\n  font-size: 14px;\n  color: #003c6e;\n}\n.pool-card--container .item3 {\n  grid-area: desc;\n  font-weight: normal;\n  font-size: small;\n  color: #003c6e;\n}\n.pool-card--container .pool--title {\n  display: grid;\n  grid-template-areas: \"icon title\" \"icon desc\";\n  gap: 0px 20px;\n}\n.pool-card--container .pool--stats {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n}\n.pool-card--container .pool--stats svg {\n  height: 15px;\n  width: 15px;\n}\n.pool-card--container .pool--stats :nth-child(1) {\n  font-weight: bold;\n  font-size: 14px;\n  color: #003c6e;\n}\n.pool-card--container .pool--stats :nth-child(2) {\n  display: flex;\n  gap: 2px;\n  font-weight: normal;\n  font-size: small;\n  color: #003c6e;\n}\n.pool-card--container .pool--button {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.pool-card--container .pool--button .button--secondary,\n.pool-card--container .pool--button .button--primary {\n  width: 130px;\n}";
+styleInject(css_248z$2);
 
 var propTypesExports = {};
 var propTypes = {
@@ -1271,19 +1271,96 @@ if (process.env.NODE_ENV !== 'production') {
   propTypes.exports = requireFactoryWithThrowingShims()();
 }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _extends$3() { _extends$3 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$3.apply(this, arguments); }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutProperties$3(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose$3(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+function _objectWithoutPropertiesLoose$3(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+var CheckSquare = React.forwardRef(function (_ref, ref) {
+  var _ref$color = _ref.color,
+      color = _ref$color === void 0 ? 'currentColor' : _ref$color,
+      _ref$size = _ref.size,
+      size = _ref$size === void 0 ? 24 : _ref$size,
+      rest = _objectWithoutProperties$3(_ref, ["color", "size"]);
+
+  return /*#__PURE__*/React.createElement("svg", _extends$3({
+    ref: ref,
+    xmlns: "http://www.w3.org/2000/svg",
+    width: size,
+    height: size,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: color,
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }, rest), /*#__PURE__*/React.createElement("polyline", {
+    points: "9 11 12 14 22 4"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+  }));
+});
+CheckSquare.propTypes = {
+  color: propTypesExports.string,
+  size: propTypesExports.oneOfType([propTypesExports.string, propTypesExports.number])
+};
+CheckSquare.displayName = 'CheckSquare';
+var CheckSquare$1 = CheckSquare;
+
+function _extends$2() { _extends$2 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$2.apply(this, arguments); }
+
+function _objectWithoutProperties$2(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose$2(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose$2(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+var ExternalLink = React.forwardRef(function (_ref, ref) {
+  var _ref$color = _ref.color,
+      color = _ref$color === void 0 ? 'currentColor' : _ref$color,
+      _ref$size = _ref.size,
+      size = _ref$size === void 0 ? 24 : _ref$size,
+      rest = _objectWithoutProperties$2(_ref, ["color", "size"]);
+
+  return /*#__PURE__*/React.createElement("svg", _extends$2({
+    ref: ref,
+    xmlns: "http://www.w3.org/2000/svg",
+    width: size,
+    height: size,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: color,
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }, rest), /*#__PURE__*/React.createElement("path", {
+    d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+  }), /*#__PURE__*/React.createElement("polyline", {
+    points: "15 3 21 3 21 9"
+  }), /*#__PURE__*/React.createElement("line", {
+    x1: "10",
+    y1: "14",
+    x2: "21",
+    y2: "3"
+  }));
+});
+ExternalLink.propTypes = {
+  color: propTypesExports.string,
+  size: propTypesExports.oneOfType([propTypesExports.string, propTypesExports.number])
+};
+ExternalLink.displayName = 'ExternalLink';
+var ExternalLink$1 = ExternalLink;
+
+function _extends$1() { _extends$1 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1.apply(this, arguments); }
+
+function _objectWithoutProperties$1(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose$1(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose$1(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 var Info = React.forwardRef(function (_ref, ref) {
   var _ref$color = _ref.color,
       color = _ref$color === void 0 ? 'currentColor' : _ref$color,
       _ref$size = _ref.size,
       size = _ref$size === void 0 ? 24 : _ref$size,
-      rest = _objectWithoutProperties(_ref, ["color", "size"]);
+      rest = _objectWithoutProperties$1(_ref, ["color", "size"]);
 
-  return /*#__PURE__*/React.createElement("svg", _extends({
+  return /*#__PURE__*/React.createElement("svg", _extends$1({
     ref: ref,
     xmlns: "http://www.w3.org/2000/svg",
     width: size,
@@ -1317,6 +1394,45 @@ Info.propTypes = {
 Info.displayName = 'Info';
 var Info$1 = Info;
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+var Square = React.forwardRef(function (_ref, ref) {
+  var _ref$color = _ref.color,
+      color = _ref$color === void 0 ? 'currentColor' : _ref$color,
+      _ref$size = _ref.size,
+      size = _ref$size === void 0 ? 24 : _ref$size,
+      rest = _objectWithoutProperties(_ref, ["color", "size"]);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    ref: ref,
+    xmlns: "http://www.w3.org/2000/svg",
+    width: size,
+    height: size,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: color,
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }, rest), /*#__PURE__*/React.createElement("rect", {
+    x: "3",
+    y: "3",
+    width: "18",
+    height: "18",
+    rx: "2",
+    ry: "2"
+  }));
+});
+Square.propTypes = {
+  color: propTypesExports.string,
+  size: propTypesExports.oneOfType([propTypesExports.string, propTypesExports.number])
+};
+Square.displayName = 'Square';
+var Square$1 = Square;
+
 var PoolCard = function (_a) {
     var poolIcon = _a.poolIcon, poolTitle = _a.poolTitle, poolDescription = _a.poolDescription, poolStat = _a.poolStat, poolSubstat = _a.poolSubstat, poolState = _a.poolState, unitranche = _a.unitranche, props = __rest(_a, ["poolIcon", "poolTitle", "poolDescription", "poolStat", "poolSubstat", "poolState", "unitranche"]);
     return (React.createElement("div", { className: "pool-card--container" },
@@ -1336,8 +1452,8 @@ var PoolCard = function (_a) {
             React.createElement(Button, __assign({ disabled: poolState == "closed" || poolState == "full", backgroundColor: poolState == "yield" ? "#1ab98b" : "#d70b48", primary: true, label: poolState }, props)))));
 };
 
-var css_248z = ".status {\n  font-family: \"Inter\", sans-serif;\n  align-items: center;\n  border-radius: 50px;\n  text-align: center;\n  font-size: 14px;\n  padding-left: 10px;\n  padding-right: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n}\n\n.status--without--icon {\n  width: auto;\n  height: auto;\n}\n\n.status--with--icon {\n  width: -moz-min-content;\n  width: min-content;\n  height: -moz-min-content;\n  height: min-content;\n  margin: 0px;\n  display: flex;\n  justify-content: center;\n  font-weight: 400;\n}\n.status--with--icon svg {\n  padding: 0px;\n  margin: 0px;\n  width: 15px;\n  height: 15px;\n  margin-right: 8px;\n}\n\n.progressbar {\n  font-family: \"Inter\", sans-serif;\n  margin-top: 5px;\n  background-color: rgba(5, 17, 19, 0.2);\n  border-radius: 5px;\n  height: 10px;\n  width: 177px;\n}\n\n.progressbar--done {\n  font-family: \"Inter\", sans-serif;\n  border-radius: 20px;\n  color: #fff;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 0;\n  opacity: 0;\n  transition: 1s ease 0.3s;\n}\n\n.slider--container {\n  width: 100%;\n}\n.slider--container .slider {\n  z-index: 0;\n  -webkit-appearance: none;\n  width: 100%;\n  height: 10px;\n  border-radius: 5px;\n  background: linear-gradient(to right, rgba(239, 68, 68, 0.5), rgba(122, 109, 87, 0.15), rgba(5, 150, 105, 0.5));\n  outline: none;\n  opacity: 1;\n  transition: opacity 0.15s ease-in-out;\n}\n.slider--container .slider::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  appearance: none;\n  width: 16px;\n  height: 16px;\n  border: 2px solid #81cfdb;\n  border-radius: 50%;\n  background: white;\n  cursor: pointer;\n}\n.slider--container .slider::-moz-range-thumb {\n  -moz-appearance: none;\n       appearance: none;\n  width: 16px;\n  height: 16px;\n  border: 2px solid #81cfdb;\n  border-radius: 50%;\n  background: white;\n  cursor: pointer;\n}";
-styleInject(css_248z);
+var css_248z$1 = ".status {\n  font-family: \"Inter\", sans-serif;\n  align-items: center;\n  border-radius: 50px;\n  text-align: center;\n  font-size: 14px;\n  padding-left: 10px;\n  padding-right: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n}\n\n.status--without--icon {\n  width: auto;\n  height: auto;\n}\n\n.status--with--icon {\n  width: -moz-min-content;\n  width: min-content;\n  height: -moz-min-content;\n  height: min-content;\n  margin: 0px;\n  display: flex;\n  justify-content: center;\n  font-weight: 400;\n}\n.status--with--icon svg {\n  padding: 0px;\n  margin: 0px;\n  width: 15px;\n  height: 15px;\n  margin-right: 8px;\n}\n\n.progressbar {\n  font-family: \"Inter\", sans-serif;\n  margin-top: 5px;\n  background-color: rgba(5, 17, 19, 0.2);\n  border-radius: 5px;\n  height: 10px;\n  width: 177px;\n}\n\n.progressbar--done {\n  font-family: \"Inter\", sans-serif;\n  border-radius: 20px;\n  color: #fff;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 0;\n  opacity: 0;\n  transition: 1s ease 0.3s;\n}\n\n.slider--container {\n  width: 100%;\n}\n.slider--container .slider {\n  z-index: 0;\n  -webkit-appearance: none;\n  width: 100%;\n  height: 10px;\n  border-radius: 5px;\n  background: linear-gradient(to right, rgba(239, 68, 68, 0.5), rgba(122, 109, 87, 0.15), rgba(5, 150, 105, 0.5));\n  outline: none;\n  opacity: 1;\n  transition: opacity 0.15s ease-in-out;\n}\n.slider--container .slider::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  appearance: none;\n  width: 16px;\n  height: 16px;\n  border: 2px solid #81cfdb;\n  border-radius: 50%;\n  background: white;\n  cursor: pointer;\n}\n.slider--container .slider::-moz-range-thumb {\n  -moz-appearance: none;\n       appearance: none;\n  width: 16px;\n  height: 16px;\n  border: 2px solid #81cfdb;\n  border-radius: 50%;\n  background: white;\n  cursor: pointer;\n}";
+styleInject(css_248z$1);
 
 // Generated with util/create-component.js
 var colorHash = {
@@ -1438,7 +1554,77 @@ var MetricRange = function (_a) {
             React.createElement("input", { className: "slider", type: "range", min: "1", max: "100", value: value }))));
 };
 
+var css_248z = ".table {\n  font-family: \"inter\", sans-serif;\n  margin-top: 30px;\n  /* top-left border-radius */\n  /* top-right border-radius \n\n  /* bottom-left border-radius */\n  /* bottom-right border-radius */\n}\n.table table {\n  border-collapse: separate;\n  border-spacing: 0;\n  min-width: 350px;\n}\n.table table tr,\n.table table tr td {\n  border-bottom: 1px solid #E2E8F0;\n  padding: 25px;\n  font-weight: bold;\n}\n.table table tr th:first-child,\n.table table tr td:first-child {\n  border-left: 1px solid #E2E8F0;\n}\n.table table tr th:first-child,\n.table table tr td:first-child {\n  border-left: 1px solid #E2E8F0;\n}\n.table table tr th {\n  background: #F8FAFC;\n  border-bottom: 1px solid #E2E8F0;\n  text-align: left;\n  padding: 10px 25px 10px 25px;\n  border-top: solid 1px #E2E8F0;\n  font-size: small;\n  font-weight: bold;\n  color: #475569;\n}\n.table table tr:first-child th:first-child {\n  border-top-left-radius: 6px;\n}\n.table table tr:last-child td:first-child {\n  border-bottom-left-radius: 6px;\n}\n.table table tr:first-child th:last-child {\n  border-top-right-radius: 6px;\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr:last-child td:last-child {\n  border-bottom-right-radius: 6px;\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr td:last-child {\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr td {\n  background: #ffffff;\n  font-size: 14px;\n}\n.table .persons--tab {\n  width: 400px;\n}\n.table .svg--icon {\n  display: flex;\n  align-items: center;\n  gap: 6px;\n}\n.table .svg--icon .selected {\n  font-weight: bold;\n}\n.table .svg--icon .not--selected {\n  font-weight: normal;\n  color: #CBD5E1;\n}\n.table .source--tab {\n  display: flex;\n  align-items: center;\n  gap: 6px;\n}\n.table .source--tab a {\n  text-align: bottom;\n  font-weight: bold;\n  font-size: 13px;\n  color: #000;\n  text-decoration: none;\n}";
+styleInject(css_248z);
+
+// Generated with util/create-component.js
+var ApplicationTable = function (_a) {
+    var applicationTableData = _a.applicationTableData;
+    return (React.createElement("div", { className: "table" },
+        React.createElement("table", null,
+            React.createElement("tr", { className: "title--row" }, [
+                "Application ID",
+                "Product",
+                "Date From",
+                "Date To",
+                "Importer ID",
+                "Importer Name",
+                "Status",
+            ].map(function (item, index) {
+                return (React.createElement("th", { key: index, className: "title--headder" }, item));
+            })),
+            applicationTableData.map(function (item, index) {
+                return (React.createElement("tr", { key: index, className: "table--content" },
+                    React.createElement("td", { className: "app--table--items" }, item.applicationId),
+                    React.createElement("td", { className: "app--table--items" }, item.product),
+                    React.createElement("td", { className: "app--table--items" }, item.dateFrom),
+                    React.createElement("td", { className: "app--table--items" }, item.dateTo),
+                    React.createElement("td", { className: "app--table--items" }, item.importerId),
+                    React.createElement("td", { className: "app--table--items" }, item.importerName),
+                    React.createElement("td", { className: "app--table--items" }, item.status)));
+            }))));
+};
+var EntityTable = function (_a) {
+    var entityTableData = _a.entityTableData;
+    return (React.createElement("div", { className: "table" },
+        React.createElement("table", null,
+            React.createElement("tr", { className: "status--title" }, ["Title", "Issuance Date", "Maturity Date", "Facility Amount"].map(function (item, index) {
+                return (React.createElement("th", { key: index, className: "status--title--items" }, item));
+            })),
+            entityTableData.map(function (item, index) {
+                return (React.createElement("tr", { className: "table--Content", key: index },
+                    React.createElement("td", { className: "persons--tab" }, item.productTitle),
+                    React.createElement("td", { className: "details--tab" }, item.issuanceDate),
+                    React.createElement("td", { className: "source--tab" }, item.maturityDate),
+                    React.createElement("td", { className: "status--tab" }, item.facilityAmount)));
+            }))));
+};
+var CompanyTable = function (_a) {
+    var companyTableData = _a.companyTableData;
+    return (React.createElement("div", { className: "table" },
+        React.createElement("table", null,
+            React.createElement("tr", { className: "status--title" }, ["Persons", "Details", "Source", "Status"].map(function (item, index) {
+                return (React.createElement("th", { key: index, className: "statusTitleItems" }, item));
+            })),
+            companyTableData.map(function (item, index) {
+                return (React.createElement("tr", { className: "tableContent", key: index },
+                    React.createElement("td", { className: "details--tab" }, item.persons),
+                    React.createElement("td", { className: "persons--tab" }, item.details),
+                    React.createElement("td", { className: "source--tab" },
+                        React.createElement("a", { href: item.source }, item.source),
+                        React.createElement(ExternalLink$1, { color: "#0BD7A4" })),
+                    React.createElement("td", { className: "status--tab" }, item.status ? (React.createElement("div", { className: "svg--icon" },
+                        React.createElement(CheckSquare$1, { color: "#0BD7A4" }),
+                        React.createElement("span", { className: "selected" }, "Verified"))) : (React.createElement("div", { className: "svg--icon" },
+                        React.createElement(Square$1, { color: "#CBD5E1" }),
+                        React.createElement("span", { className: "not--selected" }, "Verified"))))));
+            }))));
+};
+
+exports.ApplicationTable = ApplicationTable;
 exports.Button = Button;
+exports.CompanyTable = CompanyTable;
+exports.EntityTable = EntityTable;
 exports.MetricRange = MetricRange;
 exports.PoolCard = PoolCard;
 exports.ProgressBar = ProgressBar;

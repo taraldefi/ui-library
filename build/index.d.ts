@@ -1,4 +1,5 @@
 import Button from "./Button";
 import PoolCard from "./PoolCard";
 import { StatusWidget, MetricRange, ProgressBar } from "./Widgets";
-export { Button, PoolCard, StatusWidget, MetricRange, ProgressBar };
+import { ApplicationTable, EntityTable, CompanyTable } from "./Table";
+export { Button, PoolCard, StatusWidget, MetricRange, ProgressBar, ApplicationTable, EntityTable, CompanyTable };
