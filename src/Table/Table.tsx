@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from "react";
 import { CheckSquare, Square, ExternalLink, MoreHorizontal } from "react-feather";
-import { applicationTableType, entityTableType, companyTableType, screeningTableType } from "./Table.types";
+import { applicationTableType, entityTableType, companyTableType, screeningTableType, personsTableTypes } from "./Table.types";
 import "./Table.scss";
 
 
@@ -125,7 +125,7 @@ export const ScreeningTable: React.FC<screeningTableType> = ({ screeningTableDat
         <table >
             <tr className="status--title">
                 {/* <div className="statusTitle"> */}
-                {["Persons", "Details", "Source", "Status"].map((item, index) => {
+                {["Persons", "Hit", "Source", "Status"].map((item, index) => {
                     return (
                         <th key={index} className="statusTitleItems">
                             {item}
@@ -158,3 +158,69 @@ export const ScreeningTable: React.FC<screeningTableType> = ({ screeningTableDat
     </div>
 );
 
+export const PersonsTable: React.FC<personsTableTypes> = ({ personsTableData }) => (
+    <div className={"table"}>
+        <table>
+
+            <tr className="statusTitle">
+                {[
+                    "Persons",
+                    "Email",
+                    "Position",
+                    "Verification Status",
+                    "Status Verification",
+                    "Options",
+                ].map((item, index) => {
+                    return (
+                        <th key={index} className="statusTitleItems">
+                            {item}
+                        </th>
+                    );
+                })}
+            </tr>
+
+            {personsTableData.map((item, index) => {
+                return (
+                    <tr className="tableContent" key={index}>
+                        <td className="persons--container" id="assignee">
+                            <img
+                                className="images"
+                                src={item.image}
+                                key={index}
+                                alt=""
+                                width="35%"
+                                height="35%"
+                            ></img>
+                            <div className="name--container">
+                                <span>{item.name}</span>
+                            </div>
+                        </td>
+                        <td className="email--container">
+                            <span>{item.email}</span>
+                        </td>
+                        <td className="positionContainer" id="assignor">
+                            <span>{item.position}</span>
+                        </td>
+                        <td className="sent">
+                            {item.isSent ? (
+                                <div className="sent--done">Sent</div>
+                            ) : (
+                                <div className="sent--not--done">Not Sent</div>
+                            )}
+                        </td>
+                        <td className="done">
+                            {item.isDone ? (
+                                <div className="not--done">Completed</div>
+                            ) : (
+                                <div className="complete">Not Done</div>
+                            )}
+                        </td>
+                        <td className="OptionsContainer">
+                            <MoreHorizontal color="#64748b" />
+                        </td>
+                    </tr>
+                );
+            })}
+        </table>
+    </div>
+)
