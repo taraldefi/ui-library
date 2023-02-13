@@ -42,3 +42,16 @@ export interface screeningTableDataType {
 export interface screeningTableType {
   screeningTableData: screeningTableDataType[];
 }
+
+export interface personsTableDataTypes {
+  name: string;
+  image: string;
+  email: string;
+  position: string;
+  isSent: boolean;
+  isDone: boolean;
+}
+
+export interface personsTableTypes {
+  personsTableData: personsTableDataTypes[];
+}

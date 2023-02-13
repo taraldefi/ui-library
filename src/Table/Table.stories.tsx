@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from "react";
-import { ApplicationTable, CompanyTable, EntityTable, ScreeningTable } from "./Table";
-import { ApplicationTableData, CompanyTableData, EntityTableData, ScreeningTableData } from './data/data'
+import { ApplicationTable, CompanyTable, EntityTable, PersonsTable, ScreeningTable } from "./Table";
+import { ApplicationTableData, CompanyTableData, EntityTableData, ScreeningTableData, PersonsTableData } from './data/data'
 export default {
     title: "Table"
 };
@@ -14,3 +14,4 @@ export const CompanyTableComponent = () => <CompanyTable companyTableData={Compa
 
 export const ScreeningTableComponent = () => <ScreeningTable screeningTableData={ScreeningTableData} />;
 
+export const PersonsTableComponent = () => <PersonsTable personsTableData={PersonsTableData} />
