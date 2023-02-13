@@ -33,3 +33,12 @@ export interface companyTableDataType {
 export interface companyTableType {
   companyTableData: companyTableDataType[];
 }
+export interface screeningTableDataType {
+  persons: string;
+  Hit: string;
+  Source: string;
+}
+
+export interface screeningTableType {
+  screeningTableData: screeningTableDataType[];
+}
