@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from "react";
-import { CheckSquare, Square, ExternalLink } from "react-feather";
-import { applicationTableType, entityTableType, companyTableType } from "./Table.types";
+import { CheckSquare, Square, ExternalLink, MoreHorizontal } from "react-feather";
+import { applicationTableType, entityTableType, companyTableType, screeningTableType } from "./Table.types";
 import "./Table.scss";
 
 
@@ -110,6 +110,45 @@ export const CompanyTable: React.FC<companyTableType> = ({ companyTableData }) =
                                     <span className="not--selected">Verified</span>
                                 </div>
                             )}
+                        </td>
+                    </tr>
+                );
+            })}
+        </table>
+
+    </div>
+);
+
+export const ScreeningTable: React.FC<screeningTableType> = ({ screeningTableData }) => (
+
+    <div className="table">
+        <table >
+            <tr className="status--title">
+                {/* <div className="statusTitle"> */}
+                {["Persons", "Details", "Source", "Status"].map((item, index) => {
+                    return (
+                        <th key={index} className="statusTitleItems">
+                            {item}
+                        </th>
+                    );
+                })}
+                {/* </div> */}
+            </tr>
+            {screeningTableData.map((item, index) => {
+                return (
+                    <tr className="tableContent" key={index}>
+                        <td className="details--tab">{item.persons}</td>
+                        <td className="hit--tab" >{item.Hit}</td>
+                        <td className="source--tab">
+                            <a href={item.Source} >
+                                {item.Source}
+                            </a>
+                            <ExternalLink color="#0BD7A4" />
+                        </td>
+                        <td className="status--tab">
+                            <div className="svg--icon">
+                                <MoreHorizontal color="#64748b" />
+                            </div>
                         </td>
                     </tr>
                 );
