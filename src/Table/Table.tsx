@@ -125,7 +125,7 @@ export const ScreeningTable: React.FC<screeningTableType> = ({ screeningTableDat
         <table >
             <tr className="status--title">
                 {/* <div className="statusTitle"> */}
-                {["Persons", "Details", "Source", "Status"].map((item, index) => {
+                {["Persons", "Hit", "Source", "Status"].map((item, index) => {
                     return (
                         <th key={index} className="statusTitleItems">
                             {item}
