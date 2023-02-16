@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from "react";
 import { CheckSquare, Square, ExternalLink, MoreHorizontal } from "react-feather";
-import { applicationTableType, entityTableType, companyTableType, screeningTableType, personsTableTypes } from "./Table.types";
+import { applicationTableType, researchTableTypes, entityTableType, companyTableType, screeningTableType, personsTableTypes } from "./Table.types";
 import "./Table.scss";
 
 
@@ -121,11 +121,12 @@ export const CompanyTable: React.FC<companyTableType> = ({ companyTableData }) =
 
 export const ScreeningTable: React.FC<screeningTableType> = ({ screeningTableData }) => (
 
+
     <div className="table">
         <table >
             <tr className="status--title">
                 {/* <div className="statusTitle"> */}
-                {["Persons", "Hit", "Source", "Status"].map((item, index) => {
+                {["Persons", "Hit", "Source", "Options"].map((item, index) => {
                     return (
                         <th key={index} className="statusTitleItems">
                             {item}
@@ -224,3 +225,51 @@ export const PersonsTable: React.FC<personsTableTypes> = ({ personsTableData }) 
         </table>
     </div>
 )
+
+export const ResearchTable: React.FC<researchTableTypes> = ({ researchTableData }) => <div className="table">
+    <table>
+        <tr className="status--title">
+            {/* <div className="statusTitle"> */}
+            {["Persons", "Hit", "Source", "Options"].map((item, index) => {
+                return (
+                    <th key={index} className="statusTitleItems">
+                        {item}
+                    </th>
+                );
+            })}
+            {/* </div> */}
+        </tr>
+        {researchTableData.map((item, index) => {
+            return (
+                <tr className="tableContent" key={index}>
+                    <td className="persons--container" id="assignee">
+                        <img
+                            className="images"
+                            src={item.image}
+                            key={index}
+                            alt=""
+                            width="35%"
+                            height="35%"
+                        ></img>
+                        <div className="name--container">
+                            <span>{item.name}</span>
+                        </div>
+                    </td>
+                    <td className="hit--tab">{item.Hit}</td>
+                    <td className="source--tab">
+                        <a href={item.Source}>
+                            {item.Source}
+                        </a>
+                        <ExternalLink color="#0BD7A4" />
+                    </td>
+                    <td className="status--tab">
+                        <div className="svg--icon">
+                            <MoreHorizontal color="#64748b" />
+                        </div>
+                    </td>
+                </tr>
+            );
+        })}
+    </table>
+
+</div>
