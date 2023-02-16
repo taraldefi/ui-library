@@ -121,7 +121,6 @@ export const CompanyTable: React.FC<companyTableType> = ({ companyTableData }) =
 
 export const ScreeningTable: React.FC<screeningTableType> = ({ screeningTableData }) => (
 
-
     <div className="table">
         <table >
             <tr className="status--title">
@@ -143,7 +142,7 @@ export const ScreeningTable: React.FC<screeningTableType> = ({ screeningTableDat
                         <td className="source--tab">
                             <a href={item.Source} >
                                 {item.Source}
-                            </a>
+                            </a>&nbsp;&nbsp;
                             <ExternalLink color="#0BD7A4" />
                         </td>
                         <td className="status--tab">
@@ -163,7 +162,7 @@ export const PersonsTable: React.FC<personsTableTypes> = ({ personsTableData }) 
     <div className={"table"}>
         <table>
 
-            <tr className="statusTitle">
+            <tr className="status--title">
                 {[
                     "Persons",
                     "Email",
@@ -173,7 +172,7 @@ export const PersonsTable: React.FC<personsTableTypes> = ({ personsTableData }) 
                     "Options",
                 ].map((item, index) => {
                     return (
-                        <th key={index} className="statusTitleItems">
+                        <th key={index} >
                             {item}
                         </th>
                     );
@@ -182,7 +181,7 @@ export const PersonsTable: React.FC<personsTableTypes> = ({ personsTableData }) 
 
             {personsTableData.map((item, index) => {
                 return (
-                    <tr className="tableContent" key={index}>
+                    <tr key={index}>
                         <td className="persons--container" id="assignee">
                             <img
                                 className="images"
@@ -199,7 +198,7 @@ export const PersonsTable: React.FC<personsTableTypes> = ({ personsTableData }) 
                         <td className="email--container">
                             <span>{item.email}</span>
                         </td>
-                        <td className="positionContainer" id="assignor">
+                        <td id="assignor">
                             <span>{item.position}</span>
                         </td>
                         <td className="sent">
@@ -216,7 +215,7 @@ export const PersonsTable: React.FC<personsTableTypes> = ({ personsTableData }) 
                                 <div className="complete">Not Done</div>
                             )}
                         </td>
-                        <td className="OptionsContainer">
+                        <td >
                             <MoreHorizontal color="#64748b" />
                         </td>
                     </tr>
@@ -226,50 +225,51 @@ export const PersonsTable: React.FC<personsTableTypes> = ({ personsTableData }) 
     </div>
 )
 
-export const ResearchTable: React.FC<researchTableTypes> = ({ researchTableData }) => <div className="table">
-    <table>
-        <tr className="status--title">
-            {/* <div className="statusTitle"> */}
-            {["Persons", "Hit", "Source", "Options"].map((item, index) => {
+export const ResearchTable: React.FC<researchTableTypes> = ({ researchTableData }) =>
+    <div className="table">
+        <table>
+            <tr className="status--title">
+                {/* <div className="statusTitle"> */}
+                {["Persons", "Hit", "Source", "Options"].map((item, index) => {
+                    return (
+                        <th key={index} >
+                            {item}
+                        </th>
+                    );
+                })}
+                {/* </div> */}
+            </tr>
+            {researchTableData.map((item, index) => {
                 return (
-                    <th key={index} className="statusTitleItems">
-                        {item}
-                    </th>
+                    <tr key={index}>
+                        <td className="persons--container" id="assignee">
+                            <img
+                                className="images"
+                                src={item.image}
+                                key={index}
+                                alt=""
+                                width="35%"
+                                height="35%"
+                            ></img>
+                            <div className="name--container">
+                                <span>{item.name}</span>
+                            </div>
+                        </td>
+                        <td className="hit--tab">{item.Hit}</td>
+                        <td className="source--tab">
+                            <a href={item.Source}>
+                                {item.Source}
+                            </a>&nbsp;&nbsp;
+                            <ExternalLink color="#0BD7A4" />
+                        </td>
+                        <td className="status--tab">
+                            <div className="svg--icon">
+                                <MoreHorizontal color="#64748b" />
+                            </div>
+                        </td>
+                    </tr>
                 );
             })}
-            {/* </div> */}
-        </tr>
-        {researchTableData.map((item, index) => {
-            return (
-                <tr className="tableContent" key={index}>
-                    <td className="persons--container" id="assignee">
-                        <img
-                            className="images"
-                            src={item.image}
-                            key={index}
-                            alt=""
-                            width="35%"
-                            height="35%"
-                        ></img>
-                        <div className="name--container">
-                            <span>{item.name}</span>
-                        </div>
-                    </td>
-                    <td className="hit--tab">{item.Hit}</td>
-                    <td className="source--tab">
-                        <a href={item.Source}>
-                            {item.Source}
-                        </a>
-                        <ExternalLink color="#0BD7A4" />
-                    </td>
-                    <td className="status--tab">
-                        <div className="svg--icon">
-                            <MoreHorizontal color="#64748b" />
-                        </div>
-                    </td>
-                </tr>
-            );
-        })}
-    </table>
+        </table>
 
-</div>
+    </div>
