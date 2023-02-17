@@ -1598,7 +1598,7 @@ var MetricRange = function (_a) {
             React.createElement("input", { className: "slider", type: "range", min: "1", max: "100", value: value }))));
 };
 
-var css_248z = ".table {\n  font-family: \"inter\", sans-serif;\n  margin-top: 30px;\n  /* top-left border-radius */\n  /* top-right border-radius \n\n  /* bottom-left border-radius */\n  /* bottom-right border-radius */\n}\n.table table {\n  border-collapse: separate;\n  border-spacing: 0;\n  min-width: 350px;\n}\n.table table tr,\n.table table tr td {\n  border-bottom: 1px solid #E2E8F0;\n  padding: 25px;\n  font-weight: bold;\n}\n.table table tr th:first-child,\n.table table tr td:first-child {\n  border-left: 1px solid #E2E8F0;\n}\n.table table tr th:first-child,\n.table table tr td:first-child {\n  border-left: 1px solid #E2E8F0;\n}\n.table table tr th {\n  background: #F8FAFC;\n  border-bottom: 1px solid #E2E8F0;\n  text-align: left;\n  padding: 10px 25px 10px 25px;\n  border-top: solid 1px #E2E8F0;\n  font-size: small;\n  font-weight: bold;\n  color: #475569;\n}\n.table table tr:first-child th:first-child {\n  border-top-left-radius: 6px;\n}\n.table table tr:last-child td:first-child {\n  border-bottom-left-radius: 6px;\n}\n.table table tr:first-child th:last-child {\n  border-top-right-radius: 6px;\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr:last-child td:last-child {\n  border-bottom-right-radius: 6px;\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr td:last-child {\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr td {\n  background: #ffffff;\n  font-size: 14px;\n}\n.table .hit--tab {\n  font-size: 11px;\n  font-weight: normal;\n  width: 500px;\n}\n.table .persons--tab {\n  width: 400px;\n}\n.table .svg--icon {\n  display: flex;\n  align-items: center;\n  gap: 6px;\n}\n.table .svg--icon .selected {\n  font-weight: bold;\n}\n.table .svg--icon .not--selected {\n  font-weight: normal;\n  color: #CBD5E1;\n}\n.table .source--tab {\n  display: flex;\n  align-items: center;\n  gap: 6px;\n}\n.table .source--tab a {\n  text-align: bottom;\n  font-weight: bold;\n  font-size: 13px;\n  color: #000;\n  text-decoration: none;\n}\n.table .persons--container {\n  display: flex;\n  width: -moz-max-content;\n  width: max-content;\n  align-items: center;\n  gap: 8px;\n}\n.table .persons--container .images {\n  width: 32px;\n  height: 32px;\n}\n.table .email--container {\n  font-weight: normal;\n  color: #94A3B8;\n}\n.table .sent .sent--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 55px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #d1fae5;\n  color: #059669;\n  text-align: center;\n  font-weight: normal;\n}\n.table .sent .sent--not--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 83px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #fee2e2;\n  color: #ef4444;\n  text-align: center;\n  font-weight: normal;\n}\n.table .done .complete {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 87px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #fef3c7;\n  color: #f59e0b;\n  text-align: center;\n  font-weight: normal;\n}\n.table .done .not--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 97px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #10b981;\n  color: #ecfdf5;\n  text-align: center;\n  font-weight: normal;\n}";
+var css_248z = ".table {\n  font-family: \"inter\", sans-serif;\n  margin-top: 30px;\n  /* top-left border-radius */\n  /* top-right border-radius \n\n  /* bottom-left border-radius */\n  /* bottom-right border-radius */\n}\n.table table {\n  border-collapse: separate;\n  border-spacing: 0;\n  min-width: 350px;\n}\n.table table tr,\n.table table tr td {\n  border-bottom: 1px solid #E2E8F0;\n  padding: 25px;\n  font-weight: bold;\n}\n.table table tr th:first-child,\n.table table tr td:first-child {\n  border-left: 1px solid #E2E8F0;\n}\n.table table tr th:first-child,\n.table table tr td:first-child {\n  border-left: 1px solid #E2E8F0;\n}\n.table table tr th {\n  background: #F8FAFC;\n  border-bottom: 1px solid #E2E8F0;\n  text-align: left;\n  padding: 10px 25px 10px 25px;\n  border-top: solid 1px #E2E8F0;\n  font-size: small;\n  font-weight: bold;\n  color: #475569;\n}\n.table table tr:first-child th:first-child {\n  border-top-left-radius: 10px;\n}\n.table table tr:last-child td:first-child {\n  border-bottom-left-radius: 10px;\n}\n.table table tr:first-child th:last-child {\n  border-top-right-radius: 10px;\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr:last-child td:last-child {\n  border-bottom-right-radius: 10px;\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr td:last-child {\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr td {\n  background: #ffffff;\n  font-size: 14px;\n}\n.table .hit--tab {\n  font-size: 11px;\n  font-weight: normal;\n  width: 500px;\n}\n.table .persons--tab {\n  width: 400px;\n}\n.table .svg--icon {\n  display: flex;\n  align-items: center;\n  gap: 6px;\n}\n.table .svg--icon .selected {\n  font-weight: bold;\n}\n.table .svg--icon .not--selected {\n  font-weight: normal;\n  color: #CBD5E1;\n}\n.table .source--tab {\n  gap: 6px;\n}\n.table .source--tab a {\n  font-weight: bold;\n  font-size: 13px;\n  color: #000;\n  text-decoration: none;\n}\n.table .persons--container {\n  display: flex;\n  width: -moz-max-content;\n  width: max-content;\n  align-items: center;\n  gap: 8px;\n}\n.table .persons--container .images {\n  width: 32px;\n  height: 32px;\n}\n.table .email--container {\n  font-weight: normal;\n  color: #94A3B8;\n}\n.table .sent .sent--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 55px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #d1fae5;\n  color: #059669;\n  text-align: center;\n  font-weight: normal;\n}\n.table .sent .sent--not--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 83px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #fee2e2;\n  color: #ef4444;\n  text-align: center;\n  font-weight: normal;\n}\n.table .done .complete {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 87px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #fef3c7;\n  color: #f59e0b;\n  text-align: center;\n  font-weight: normal;\n}\n.table .done .not--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 97px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #10b981;\n  color: #ecfdf5;\n  text-align: center;\n  font-weight: normal;\n}";
 styleInject(css_248z);
 
 // Generated with util/create-component.js
@@ -1668,7 +1668,7 @@ var ScreeningTable = function (_a) {
     var screeningTableData = _a.screeningTableData;
     return (React.createElement("div", { className: "table" },
         React.createElement("table", null,
-            React.createElement("tr", { className: "status--title" }, ["Persons", "Hit", "Source", "Status"].map(function (item, index) {
+            React.createElement("tr", { className: "status--title" }, ["Persons", "Hit", "Source", "Options"].map(function (item, index) {
                 return (React.createElement("th", { key: index, className: "statusTitleItems" }, item));
             })),
             screeningTableData.map(function (item, index) {
@@ -1677,6 +1677,7 @@ var ScreeningTable = function (_a) {
                     React.createElement("td", { className: "hit--tab" }, item.Hit),
                     React.createElement("td", { className: "source--tab" },
                         React.createElement("a", { href: item.Source }, item.Source),
+                        "\u00A0\u00A0",
                         React.createElement(ExternalLink$1, { color: "#0BD7A4" })),
                     React.createElement("td", { className: "status--tab" },
                         React.createElement("div", { className: "svg--icon" },
@@ -1687,7 +1688,7 @@ var PersonsTable = function (_a) {
     var personsTableData = _a.personsTableData;
     return (React.createElement("div", { className: "table" },
         React.createElement("table", null,
-            React.createElement("tr", { className: "statusTitle" }, [
+            React.createElement("tr", { className: "status--title" }, [
                 "Persons",
                 "Email",
                 "Position",
@@ -1695,23 +1696,46 @@ var PersonsTable = function (_a) {
                 "Status Verification",
                 "Options",
             ].map(function (item, index) {
-                return (React.createElement("th", { key: index, className: "statusTitleItems" }, item));
+                return (React.createElement("th", { key: index }, item));
             })),
             personsTableData.map(function (item, index) {
-                return (React.createElement("tr", { className: "tableContent", key: index },
+                return (React.createElement("tr", { key: index },
                     React.createElement("td", { className: "persons--container", id: "assignee" },
                         React.createElement("img", { className: "images", src: item.image, key: index, alt: "", width: "35%", height: "35%" }),
                         React.createElement("div", { className: "name--container" },
                             React.createElement("span", null, item.name))),
                     React.createElement("td", { className: "email--container" },
                         React.createElement("span", null, item.email)),
-                    React.createElement("td", { className: "positionContainer", id: "assignor" },
+                    React.createElement("td", { id: "assignor" },
                         React.createElement("span", null, item.position)),
                     React.createElement("td", { className: "sent" }, item.isSent ? (React.createElement("div", { className: "sent--done" }, "Sent")) : (React.createElement("div", { className: "sent--not--done" }, "Not Sent"))),
                     React.createElement("td", { className: "done" }, item.isDone ? (React.createElement("div", { className: "not--done" }, "Completed")) : (React.createElement("div", { className: "complete" }, "Not Done"))),
-                    React.createElement("td", { className: "OptionsContainer" },
+                    React.createElement("td", null,
                         React.createElement(MoreHorizontal$1, { color: "#64748b" }))));
             }))));
+};
+var ResearchTable = function (_a) {
+    var researchTableData = _a.researchTableData;
+    return React.createElement("div", { className: "table" },
+        React.createElement("table", null,
+            React.createElement("tr", { className: "status--title" }, ["Persons", "Hit", "Source", "Options"].map(function (item, index) {
+                return (React.createElement("th", { key: index }, item));
+            })),
+            researchTableData.map(function (item, index) {
+                return (React.createElement("tr", { key: index },
+                    React.createElement("td", { className: "persons--container", id: "assignee" },
+                        React.createElement("img", { className: "images", src: item.image, key: index, alt: "", width: "35%", height: "35%" }),
+                        React.createElement("div", { className: "name--container" },
+                            React.createElement("span", null, item.name))),
+                    React.createElement("td", { className: "hit--tab" }, item.Hit),
+                    React.createElement("td", { className: "source--tab" },
+                        React.createElement("a", { href: item.Source }, item.Source),
+                        "\u00A0\u00A0",
+                        React.createElement(ExternalLink$1, { color: "#0BD7A4" })),
+                    React.createElement("td", { className: "status--tab" },
+                        React.createElement("div", { className: "svg--icon" },
+                            React.createElement(MoreHorizontal$1, { color: "#64748b" })))));
+            })));
 };
 
 exports.ApplicationTable = ApplicationTable;
@@ -1722,6 +1746,7 @@ exports.MetricRange = MetricRange;
 exports.PersonsTable = PersonsTable;
 exports.PoolCard = PoolCard;
 exports.ProgressBar = ProgressBar;
+exports.ResearchTable = ResearchTable;
 exports.ScreeningTable = ScreeningTable;
 exports.StatusWidget = StatusWidget;
 //# sourceMappingURL=index.js.map
