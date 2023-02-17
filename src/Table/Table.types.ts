@@ -55,3 +55,14 @@ export interface personsTableDataTypes {
 export interface personsTableTypes {
   personsTableData: personsTableDataTypes[];
 }
+
+export interface researchTableDataTypes {
+  name: string;
+  image: string;
+  Hit: string;
+  Source: string;
+}
+
+export interface researchTableTypes {
+  researchTableData: researchTableDataTypes[];
+}
