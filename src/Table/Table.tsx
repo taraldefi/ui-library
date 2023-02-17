@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from "react";
 import { CheckSquare, Square, ExternalLink, MoreHorizontal } from "react-feather";
-import { applicationTableType, researchTableTypes, entityTableType, companyTableType, screeningTableType, personsTableTypes } from "./Table.types";
+import { applicationTableType, researchTableTypes, entityTableType, companyTableType, screeningTableType, personsTableTypes, signoffTableTypes } from "./Table.types";
 import "./Table.scss";
 
 
@@ -272,5 +272,71 @@ export const ResearchTable: React.FC<researchTableTypes> = ({ researchTableData 
             })}
         </table>
 
+    </div>
+)
+
+export const SignoffTable: React.FC<signoffTableTypes> = ({ signoffTableData }) => (
+    <div className="table">
+        <table>
+            <tr>
+
+                {
+                    ["Name", "Position", "Status", "Status"].map((item, index) => {
+                        return (
+                            <th key={index}>
+                                {item}
+                            </th>
+                        )
+                    })
+                }
+
+            </tr>
+            {
+                signoffTableData.map((item, index) => {
+                    return (
+                        <tr key={index}>
+                            <td className="user--container">
+                                <img className="images"
+                                    src={item.image}
+                                    key={index}
+                                    alt=""
+                                    width="32px"
+                                    height="32px"
+                                     />
+                                <div className="flex--box">
+                                    <span>{item.name}</span>
+                                    <span>{item.email}</span>
+                                </div>
+                            </td>
+                            <td>
+                                {item.position}
+                            </td>
+                            <td>
+                                {
+                                    item.statusSeen ? <div className="svg--icon">
+                                        <CheckSquare color="#0BD7A4" />
+                                        <span className="selected">Seen</span>
+                                    </div> : <div className="svg--icon">
+                                        <Square color="#CBD5E1" />
+                                        <span className="not--selected">Seen</span>
+                                    </div>
+                                }
+                            </td>
+                            <td>
+                                {
+                                    item.statusSigned ? <div className="svg--icon">
+                                        <CheckSquare color="#0BD7A4" />
+                                        <span className="selected">Signed</span>
+                                    </div> : <div className="svg--icon">
+                                        <Square color="#CBD5E1" />
+                                        <span className="not--selected">Signed</span>
+                                    </div>
+                                }
+                            </td>
+                        </tr>
+                    )
+                })
+            }
+        </table>
     </div>
 )
