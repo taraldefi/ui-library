@@ -95,7 +95,7 @@ export const CompanyTable: React.FC<companyTableType> = ({ companyTableData }) =
                         <td className="source--tab">
                             <a href={item.source} >
                                 {item.source}
-                            </a>
+                            </a>&nbsp;&nbsp;
                             <ExternalLink color="#0BD7A4" />
                         </td>
                         <td className="status--tab">
