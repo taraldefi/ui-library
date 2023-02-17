@@ -225,7 +225,7 @@ export const PersonsTable: React.FC<personsTableTypes> = ({ personsTableData }) 
     </div>
 )
 
-export const ResearchTable: React.FC<researchTableTypes> = ({ researchTableData }) =>
+export const ResearchTable: React.FC<researchTableTypes> = ({ researchTableData }) => (
     <div className="table">
         <table>
             <tr className="status--title">
@@ -273,3 +273,4 @@ export const ResearchTable: React.FC<researchTableTypes> = ({ researchTableData 
         </table>
 
     </div>
+)
