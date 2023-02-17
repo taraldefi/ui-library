@@ -66,3 +66,16 @@ export interface researchTableDataTypes {
 export interface researchTableTypes {
   researchTableData: researchTableDataTypes[];
 }
+
+export interface signoffTabelDataTypes {
+  name: string;
+  image: string;
+  email: string;
+  position: string;
+  statusSeen: boolean;
+  statusSigned: boolean;
+}
+
+export interface signoffTableTypes {
+  signoffTableData: signoffTabelDataTypes[];
+}
