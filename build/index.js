@@ -1598,7 +1598,7 @@ var MetricRange = function (_a) {
             React.createElement("input", { className: "slider", type: "range", min: "1", max: "100", value: value }))));
 };
 
-var css_248z = ".table {\n  font-family: \"inter\", sans-serif;\n  margin-top: 30px;\n  /* top-left border-radius */\n  /* top-right border-radius \n\n  /* bottom-left border-radius */\n  /* bottom-right border-radius */\n}\n.table table {\n  border-collapse: separate;\n  border-spacing: 0;\n  min-width: 350px;\n}\n.table table tr,\n.table table tr td {\n  border-bottom: 1px solid #E2E8F0;\n  padding: 25px;\n  font-weight: bold;\n}\n.table table tr th:first-child,\n.table table tr td:first-child {\n  border-left: 1px solid #E2E8F0;\n}\n.table table tr th:first-child,\n.table table tr td:first-child {\n  border-left: 1px solid #E2E8F0;\n}\n.table table tr th {\n  background: #F8FAFC;\n  border-bottom: 1px solid #E2E8F0;\n  text-align: left;\n  padding: 10px 25px 10px 25px;\n  border-top: solid 1px #E2E8F0;\n  font-size: small;\n  font-weight: bold;\n  color: #475569;\n}\n.table table tr:first-child th:first-child {\n  border-top-left-radius: 10px;\n}\n.table table tr:last-child td:first-child {\n  border-bottom-left-radius: 10px;\n}\n.table table tr:first-child th:last-child {\n  border-top-right-radius: 10px;\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr:last-child td:last-child {\n  border-bottom-right-radius: 10px;\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr td:last-child {\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr td {\n  background: #ffffff;\n  font-size: 14px;\n}\n.table .hit--tab {\n  font-size: 11px;\n  font-weight: normal;\n  width: 500px;\n}\n.table .persons--tab {\n  width: 400px;\n}\n.table .svg--icon {\n  display: flex;\n  align-items: center;\n  gap: 6px;\n}\n.table .svg--icon .selected {\n  font-weight: bold;\n}\n.table .svg--icon .not--selected {\n  font-weight: normal;\n  color: #CBD5E1;\n}\n.table .source--tab {\n  gap: 6px;\n}\n.table .source--tab a {\n  font-weight: bold;\n  font-size: 13px;\n  color: #000;\n  text-decoration: none;\n}\n.table .persons--container {\n  display: flex;\n  width: -moz-max-content;\n  width: max-content;\n  align-items: center;\n  gap: 8px;\n}\n.table .persons--container .images {\n  width: 32px;\n  height: 32px;\n}\n.table .email--container {\n  font-weight: normal;\n  color: #94A3B8;\n}\n.table .sent .sent--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 55px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #d1fae5;\n  color: #059669;\n  text-align: center;\n  font-weight: normal;\n}\n.table .sent .sent--not--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 83px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #fee2e2;\n  color: #ef4444;\n  text-align: center;\n  font-weight: normal;\n}\n.table .done .complete {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 87px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #fef3c7;\n  color: #f59e0b;\n  text-align: center;\n  font-weight: normal;\n}\n.table .done .not--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 97px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #10b981;\n  color: #ecfdf5;\n  text-align: center;\n  font-weight: normal;\n}";
+var css_248z = ".table {\n  font-family: \"inter\", sans-serif;\n  margin-top: 30px;\n  /* top-left border-radius */\n  /* top-right border-radius \n\n  /* bottom-left border-radius */\n  /* bottom-right border-radius */\n}\n.table table {\n  border-collapse: separate;\n  border-spacing: 0;\n  min-width: 350px;\n}\n.table table tr,\n.table table tr td {\n  border-bottom: 1px solid #E2E8F0;\n  padding: 25px;\n  font-weight: bold;\n}\n.table table tr th:first-child,\n.table table tr td:first-child {\n  border-left: 1px solid #E2E8F0;\n}\n.table table tr th:first-child,\n.table table tr td:first-child {\n  border-left: 1px solid #E2E8F0;\n}\n.table table tr th {\n  background: #F8FAFC;\n  border-bottom: 1px solid #E2E8F0;\n  text-align: left;\n  padding: 10px 25px 10px 25px;\n  border-top: solid 1px #E2E8F0;\n  font-size: small;\n  font-weight: bold;\n  color: #475569;\n}\n.table table tr:first-child th:first-child {\n  border-top-left-radius: 10px;\n}\n.table table tr:last-child td:first-child {\n  border-bottom-left-radius: 10px;\n}\n.table table tr:first-child th:last-child {\n  border-top-right-radius: 10px;\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr:last-child td:last-child {\n  border-bottom-right-radius: 10px;\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr td:last-child {\n  border-right: 1px solid #E2E8F0;\n}\n.table table tr td {\n  background: #ffffff;\n  font-size: 14px;\n}\n.table .hit--tab {\n  font-size: 11px;\n  font-weight: normal;\n  width: 500px;\n}\n.table .user--container {\n  width: 400px;\n}\n.table .persons--tab {\n  width: 400px;\n}\n.table .svg--icon {\n  display: flex;\n  align-items: center;\n  gap: 6px;\n}\n.table .svg--icon .selected {\n  font-weight: bold;\n}\n.table .svg--icon .not--selected {\n  font-weight: normal;\n  color: #CBD5E1;\n}\n.table .source--tab {\n  gap: 6px;\n}\n.table .source--tab a {\n  font-weight: bold;\n  font-size: 13px;\n  color: #000;\n  text-decoration: none;\n}\n.table .source--tab :nth-child(2) {\n  position: relative;\n  bottom: -5px;\n}\n.table .persons--container {\n  display: flex;\n  width: -moz-max-content;\n  width: max-content;\n  align-items: center;\n  gap: 8px;\n}\n.table .persons--container .images {\n  width: 32px;\n  height: 32px;\n}\n.table .email--container {\n  font-weight: normal;\n  color: #94A3B8;\n}\n.table .sent .sent--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 55px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #d1fae5;\n  color: #059669;\n  text-align: center;\n  font-weight: normal;\n}\n.table .sent .sent--not--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 83px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #fee2e2;\n  color: #ef4444;\n  text-align: center;\n  font-weight: normal;\n}\n.table .done .complete {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 87px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #fef3c7;\n  color: #f59e0b;\n  text-align: center;\n  font-weight: normal;\n}\n.table .done .not--done {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 97px;\n  height: 25px;\n  border-radius: 50px;\n  background-color: #10b981;\n  color: #ecfdf5;\n  text-align: center;\n  font-weight: normal;\n}\n.table .user--container {\n  display: flex;\n  gap: 5px;\n}\n.table .user--container .flex--box {\n  display: flex;\n  flex-direction: column;\n  gap: 2px;\n}\n.table .user--container .flex--box :nth-child(2) {\n  font-weight: normal;\n  color: #94A3B8;\n  font-size: 12px;\n}";
 styleInject(css_248z);
 
 // Generated with util/create-component.js
@@ -1656,6 +1656,7 @@ var CompanyTable = function (_a) {
                     React.createElement("td", { className: "persons--tab" }, item.details),
                     React.createElement("td", { className: "source--tab" },
                         React.createElement("a", { href: item.source }, item.source),
+                        "\u00A0\u00A0",
                         React.createElement(ExternalLink$1, { color: "#0BD7A4" })),
                     React.createElement("td", { className: "status--tab" }, item.status ? (React.createElement("div", { className: "svg--icon" },
                         React.createElement(CheckSquare$1, { color: "#0BD7A4" }),
@@ -1716,7 +1717,7 @@ var PersonsTable = function (_a) {
 };
 var ResearchTable = function (_a) {
     var researchTableData = _a.researchTableData;
-    return React.createElement("div", { className: "table" },
+    return (React.createElement("div", { className: "table" },
         React.createElement("table", null,
             React.createElement("tr", { className: "status--title" }, ["Persons", "Hit", "Source", "Options"].map(function (item, index) {
                 return (React.createElement("th", { key: index }, item));
@@ -1735,7 +1736,34 @@ var ResearchTable = function (_a) {
                     React.createElement("td", { className: "status--tab" },
                         React.createElement("div", { className: "svg--icon" },
                             React.createElement(MoreHorizontal$1, { color: "#64748b" })))));
-            })));
+            }))));
+};
+var SignoffTable = function (_a) {
+    var signoffTableData = _a.signoffTableData;
+    return (React.createElement("div", { className: "table" },
+        React.createElement("table", null,
+            React.createElement("tr", null, ["Name", "Position", "Status", "Status"].map(function (item, index) {
+                return (React.createElement("th", { key: index }, item));
+            })),
+            signoffTableData.map(function (item, index) {
+                return (React.createElement("tr", { key: index },
+                    React.createElement("td", { className: "user--container" },
+                        React.createElement("img", { className: "images", src: item.image, key: index, alt: "", width: "32px", height: "32px" }),
+                        React.createElement("div", { className: "flex--box" },
+                            React.createElement("span", null, item.name),
+                            React.createElement("span", null, item.email))),
+                    React.createElement("td", null, item.position),
+                    React.createElement("td", null, item.statusSeen ? React.createElement("div", { className: "svg--icon" },
+                        React.createElement(CheckSquare$1, { color: "#0BD7A4" }),
+                        React.createElement("span", { className: "selected" }, "Seen")) : React.createElement("div", { className: "svg--icon" },
+                        React.createElement(Square$1, { color: "#CBD5E1" }),
+                        React.createElement("span", { className: "not--selected" }, "Seen"))),
+                    React.createElement("td", null, item.statusSigned ? React.createElement("div", { className: "svg--icon" },
+                        React.createElement(CheckSquare$1, { color: "#0BD7A4" }),
+                        React.createElement("span", { className: "selected" }, "Signed")) : React.createElement("div", { className: "svg--icon" },
+                        React.createElement(Square$1, { color: "#CBD5E1" }),
+                        React.createElement("span", { className: "not--selected" }, "Signed")))));
+            }))));
 };
 
 exports.ApplicationTable = ApplicationTable;
@@ -1748,5 +1776,6 @@ exports.PoolCard = PoolCard;
 exports.ProgressBar = ProgressBar;
 exports.ResearchTable = ResearchTable;
 exports.ScreeningTable = ScreeningTable;
+exports.SignoffTable = SignoffTable;
 exports.StatusWidget = StatusWidget;
 //# sourceMappingURL=index.js.map
