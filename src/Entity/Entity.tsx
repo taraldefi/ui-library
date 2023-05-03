@@ -1,8 +1,6 @@
 // Generated with util/create-component.js
 import React from 'react';
-
 import { EntityType } from './Entity.types';
-
 import './Entity.scss';
 
 export function Entity({ entityData, modal }: EntityType) {
