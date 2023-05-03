@@ -1,36 +1,39 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-
-name: Publish Component Library to github packages
+name: Publish to GitHub Package Registry
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main # Change this to the branch you want to trigger the deployment from
 
 jobs:
-  build:
+  build-and-publish:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm ci
-      - run: npm test
 
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14 # Change this to the Node.js version you want to use
+        registry-url: https://npm.pkg.github.com/
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Bump package version
+      id: package-version
+      uses: phips28/gh-action-bump-version@v10.0.0
+      with:
+        skip-verify: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build package
+      run: npm run build # Change this to your build script if needed
+
+    - name: Publish package
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
