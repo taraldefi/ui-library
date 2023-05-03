@@ -18,7 +18,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16 # Change this to the Node.js version you want to use
-        registry-url: https://npm.pkg.github.com/
+        registry-url: https://npm.pkg.github.com/taraldefi
 
     - name: Install dependencies
       run: npm install
@@ -30,7 +30,7 @@ jobs:
         tag-prefix: "v"
         skip-verify: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
     - name: Build package
       run: npm run build # Change this to your build script if needed
@@ -38,4 +38,4 @@ jobs:
     - name: Publish package
       run: npm publish
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
