@@ -1604,164 +1604,171 @@ var ApplicationTable = function (_a) {
     var applicationTableData = _a.applicationTableData;
     return (React.createElement("div", { className: "table" },
         React.createElement("table", null,
-            React.createElement("tr", { className: "title--row" }, [
-                "Application ID",
-                "Product",
-                "Date From",
-                "Date To",
-                "Importer ID",
-                "Importer Name",
-                "Status",
-            ].map(function (item, index) {
-                return (React.createElement("th", { key: index, className: "title--headder" }, item));
-            })),
-            applicationTableData.map(function (item, index) {
-                return (React.createElement("tr", { key: index, className: "table--content" },
-                    React.createElement("td", { className: "app--table--items" }, item.applicationId),
-                    React.createElement("td", { className: "app--table--items" }, item.product),
-                    React.createElement("td", { className: "app--table--items" }, item.dateFrom),
-                    React.createElement("td", { className: "app--table--items" }, item.dateTo),
-                    React.createElement("td", { className: "app--table--items" }, item.importerId),
-                    React.createElement("td", { className: "app--table--items" }, item.importerName),
-                    React.createElement("td", { className: "app--table--items" }, item.status)));
-            }))));
+            React.createElement("tbody", null,
+                React.createElement("tr", { className: "title--row" }, [
+                    'Application ID',
+                    'Product',
+                    'Date From',
+                    'Date To',
+                    'Importer ID',
+                    'Importer Name',
+                    'Status'
+                ].map(function (item, index) {
+                    return (React.createElement("th", { key: index, className: "title--headder" }, item));
+                })),
+                applicationTableData.map(function (item, index) {
+                    return (React.createElement("tr", { key: index, className: "table--content" },
+                        React.createElement("td", { className: "app--table--items" }, item.applicationId),
+                        React.createElement("td", { className: "app--table--items" }, item.product),
+                        React.createElement("td", { className: "app--table--items" }, item.dateFrom),
+                        React.createElement("td", { className: "app--table--items" }, item.dateTo),
+                        React.createElement("td", { className: "app--table--items" }, item.importerId),
+                        React.createElement("td", { className: "app--table--items" }, item.importerName),
+                        React.createElement("td", { className: "app--table--items" }, item.status)));
+                })))));
 };
 var EntityTable = function (_a) {
     var entityTableData = _a.entityTableData;
     return (React.createElement("div", { className: "table" },
         React.createElement("table", null,
-            React.createElement("tr", { className: "status--title" }, ["Title", "Issuance Date", "Maturity Date", "Facility Amount"].map(function (item, index) {
-                return (React.createElement("th", { key: index, className: "status--title--items" }, item));
-            })),
-            entityTableData.map(function (item, index) {
-                return (React.createElement("tr", { className: "table--Content", key: index },
-                    React.createElement("td", { className: "persons--tab" }, item.productTitle),
-                    React.createElement("td", { className: "details--tab" }, item.issuanceDate),
-                    React.createElement("td", { className: "source--tab" }, item.maturityDate),
-                    React.createElement("td", { className: "status--tab" }, item.facilityAmount)));
-            }))));
+            React.createElement("tbody", null,
+                React.createElement("tr", { className: "status--title" }, ['Title', 'Issuance Date', 'Maturity Date', 'Facility Amount'].map(function (item, index) {
+                    return (React.createElement("th", { key: index, className: "status--title--items" }, item));
+                })),
+                entityTableData.map(function (item, index) {
+                    return (React.createElement("tr", { className: "table--Content", key: index },
+                        React.createElement("td", { className: "persons--tab" }, item.productTitle),
+                        React.createElement("td", { className: "details--tab" }, item.issuanceDate),
+                        React.createElement("td", { className: "source--tab" }, item.maturityDate),
+                        React.createElement("td", { className: "status--tab" }, item.facilityAmount)));
+                })))));
 };
 var CompanyTable = function (_a) {
     var companyTableData = _a.companyTableData;
     return (React.createElement("div", { className: "table" },
         React.createElement("table", null,
-            React.createElement("tr", { className: "status--title" }, ["Persons", "Details", "Source", "Status"].map(function (item, index) {
-                return (React.createElement("th", { key: index, className: "statusTitleItems" }, item));
-            })),
-            companyTableData.map(function (item, index) {
-                return (React.createElement("tr", { className: "tableContent", key: index },
-                    React.createElement("td", { className: "details--tab" }, item.persons),
-                    React.createElement("td", { className: "persons--tab" }, item.details),
-                    React.createElement("td", { className: "source--tab" },
-                        React.createElement("a", { href: item.source }, item.source),
-                        "\u00A0\u00A0",
-                        React.createElement(ExternalLink$1, { color: "#0BD7A4" })),
-                    React.createElement("td", { className: "status--tab" }, item.status ? (React.createElement("div", { className: "svg--icon" },
-                        React.createElement(CheckSquare$1, { color: "#0BD7A4" }),
-                        React.createElement("span", { className: "selected" }, "Verified"))) : (React.createElement("div", { className: "svg--icon" },
-                        React.createElement(Square$1, { color: "#CBD5E1" }),
-                        React.createElement("span", { className: "not--selected" }, "Verified"))))));
-            }))));
+            React.createElement("tbody", null,
+                React.createElement("tr", { className: "status--title" }, ['Persons', 'Details', 'Source', 'Status'].map(function (item, index) {
+                    return (React.createElement("th", { key: index, className: "statusTitleItems" }, item));
+                })),
+                companyTableData.map(function (item, index) {
+                    return (React.createElement("tr", { className: "tableContent", key: index },
+                        React.createElement("td", { className: "details--tab" }, item.persons),
+                        React.createElement("td", { className: "persons--tab" }, item.details),
+                        React.createElement("td", { className: "source--tab" },
+                            React.createElement("a", { href: item.source }, item.source),
+                            "\u00A0\u00A0",
+                            React.createElement(ExternalLink$1, { color: "#0BD7A4" })),
+                        React.createElement("td", { className: "status--tab" }, item.status ? (React.createElement("div", { className: "svg--icon" },
+                            React.createElement(CheckSquare$1, { color: "#0BD7A4" }),
+                            React.createElement("span", { className: "selected" }, "Verified"))) : (React.createElement("div", { className: "svg--icon" },
+                            React.createElement(Square$1, { color: "#CBD5E1" }),
+                            React.createElement("span", { className: "not--selected" }, "Verified"))))));
+                })))));
 };
 var ScreeningTable = function (_a) {
     var screeningTableData = _a.screeningTableData;
     return (React.createElement("div", { className: "table" },
         React.createElement("table", null,
-            React.createElement("tr", { className: "status--title" }, ["Persons", "Hit", "Source", "Options"].map(function (item, index) {
-                return (React.createElement("th", { key: index, className: "statusTitleItems" }, item));
-            })),
-            screeningTableData.map(function (item, index) {
-                return (React.createElement("tr", { className: "tableContent", key: index },
-                    React.createElement("td", { className: "details--tab" }, item.persons),
-                    React.createElement("td", { className: "hit--tab" }, item.Hit),
-                    React.createElement("td", { className: "source--tab" },
-                        React.createElement("a", { href: item.Source }, item.Source),
-                        "\u00A0\u00A0",
-                        React.createElement(ExternalLink$1, { color: "#0BD7A4" })),
-                    React.createElement("td", { className: "status--tab" },
-                        React.createElement("div", { className: "svg--icon" },
-                            React.createElement(MoreHorizontal$1, { color: "#64748b" })))));
-            }))));
+            React.createElement("tbody", null,
+                React.createElement("tr", { className: "status--title" }, ['Persons', 'Hit', 'Source', 'Options'].map(function (item, index) {
+                    return (React.createElement("th", { key: index, className: "statusTitleItems" }, item));
+                })),
+                screeningTableData.map(function (item, index) {
+                    return (React.createElement("tr", { className: "tableContent", key: index },
+                        React.createElement("td", { className: "details--tab" }, item.persons),
+                        React.createElement("td", { className: "hit--tab" }, item.Hit),
+                        React.createElement("td", { className: "source--tab" },
+                            React.createElement("a", { href: item.Source }, item.Source),
+                            "\u00A0\u00A0",
+                            React.createElement(ExternalLink$1, { color: "#0BD7A4" })),
+                        React.createElement("td", { className: "status--tab" },
+                            React.createElement("div", { className: "svg--icon" },
+                                React.createElement(MoreHorizontal$1, { color: "#64748b" })))));
+                })))));
 };
 var PersonsTable = function (_a) {
     var personsTableData = _a.personsTableData;
-    return (React.createElement("div", { className: "table" },
+    return (React.createElement("div", { className: 'table' },
         React.createElement("table", null,
-            React.createElement("tr", { className: "status--title" }, [
-                "Persons",
-                "Email",
-                "Position",
-                "Verification Status",
-                "Status Verification",
-                "Options",
-            ].map(function (item, index) {
-                return (React.createElement("th", { key: index }, item));
-            })),
-            personsTableData.map(function (item, index) {
-                return (React.createElement("tr", { key: index },
-                    React.createElement("td", { className: "persons--container", id: "assignee" },
-                        React.createElement("img", { className: "images", src: item.image, key: index, alt: "", width: "35%", height: "35%" }),
-                        React.createElement("div", { className: "name--container" },
-                            React.createElement("span", null, item.name))),
-                    React.createElement("td", { className: "email--container" },
-                        React.createElement("span", null, item.email)),
-                    React.createElement("td", { id: "assignor" },
-                        React.createElement("span", null, item.position)),
-                    React.createElement("td", { className: "sent" }, item.isSent ? (React.createElement("div", { className: "sent--done" }, "Sent")) : (React.createElement("div", { className: "sent--not--done" }, "Not Sent"))),
-                    React.createElement("td", { className: "done" }, item.isDone ? (React.createElement("div", { className: "not--done" }, "Completed")) : (React.createElement("div", { className: "complete" }, "Not Done"))),
-                    React.createElement("td", null,
-                        React.createElement(MoreHorizontal$1, { color: "#64748b" }))));
-            }))));
+            React.createElement("tbody", null,
+                React.createElement("tr", { className: "status--title" }, [
+                    'Persons',
+                    'Email',
+                    'Position',
+                    'Verification Status',
+                    'Status Verification',
+                    'Options'
+                ].map(function (item, index) {
+                    return React.createElement("th", { key: index }, item);
+                })),
+                personsTableData.map(function (item, index) {
+                    return (React.createElement("tr", { key: index },
+                        React.createElement("td", { className: "persons--container", id: "assignee" },
+                            React.createElement("img", { className: "images", src: item.image, key: index, alt: "", width: "35%", height: "35%" }),
+                            React.createElement("div", { className: "name--container" },
+                                React.createElement("span", null, item.name))),
+                        React.createElement("td", { className: "email--container" },
+                            React.createElement("span", null, item.email)),
+                        React.createElement("td", { id: "assignor" },
+                            React.createElement("span", null, item.position)),
+                        React.createElement("td", { className: "sent" }, item.isSent ? (React.createElement("div", { className: "sent--done" }, "Sent")) : (React.createElement("div", { className: "sent--not--done" }, "Not Sent"))),
+                        React.createElement("td", { className: "done" }, item.isDone ? (React.createElement("div", { className: "not--done" }, "Completed")) : (React.createElement("div", { className: "complete" }, "Not Done"))),
+                        React.createElement("td", null,
+                            React.createElement(MoreHorizontal$1, { color: "#64748b" }))));
+                })))));
 };
 var ResearchTable = function (_a) {
     var researchTableData = _a.researchTableData;
     return (React.createElement("div", { className: "table" },
         React.createElement("table", null,
-            React.createElement("tr", { className: "status--title" }, ["Persons", "Hit", "Source", "Options"].map(function (item, index) {
-                return (React.createElement("th", { key: index }, item));
-            })),
-            researchTableData.map(function (item, index) {
-                return (React.createElement("tr", { key: index },
-                    React.createElement("td", { className: "persons--container", id: "assignee" },
-                        React.createElement("img", { className: "images", src: item.image, key: index, alt: "", width: "35%", height: "35%" }),
-                        React.createElement("div", { className: "name--container" },
-                            React.createElement("span", null, item.name))),
-                    React.createElement("td", { className: "hit--tab" }, item.Hit),
-                    React.createElement("td", { className: "source--tab" },
-                        React.createElement("a", { href: item.Source }, item.Source),
-                        "\u00A0\u00A0",
-                        React.createElement(ExternalLink$1, { color: "#0BD7A4" })),
-                    React.createElement("td", { className: "status--tab" },
-                        React.createElement("div", { className: "svg--icon" },
-                            React.createElement(MoreHorizontal$1, { color: "#64748b" })))));
-            }))));
+            React.createElement("tbody", null,
+                React.createElement("tr", { className: "status--title" }, ['Persons', 'Hit', 'Source', 'Options'].map(function (item, index) {
+                    return React.createElement("th", { key: index }, item);
+                })),
+                researchTableData.map(function (item, index) {
+                    return (React.createElement("tr", { key: index },
+                        React.createElement("td", { className: "persons--container", id: "assignee" },
+                            React.createElement("img", { className: "images", src: item.image, key: index, alt: "", width: "35%", height: "35%" }),
+                            React.createElement("div", { className: "name--container" },
+                                React.createElement("span", null, item.name))),
+                        React.createElement("td", { className: "hit--tab" }, item.Hit),
+                        React.createElement("td", { className: "source--tab" },
+                            React.createElement("a", { href: item.Source }, item.Source),
+                            "\u00A0\u00A0",
+                            React.createElement(ExternalLink$1, { color: "#0BD7A4" })),
+                        React.createElement("td", { className: "status--tab" },
+                            React.createElement("div", { className: "svg--icon" },
+                                React.createElement(MoreHorizontal$1, { color: "#64748b" })))));
+                })))));
 };
 var SignoffTable = function (_a) {
     var signoffTableData = _a.signoffTableData;
     return (React.createElement("div", { className: "table" },
         React.createElement("table", null,
-            React.createElement("tr", null, ["Name", "Position", "Status", "Status"].map(function (item, index) {
-                return (React.createElement("th", { key: index }, item));
-            })),
-            signoffTableData.map(function (item, index) {
-                return (React.createElement("tr", { key: index },
-                    React.createElement("td", { className: "user--container" },
-                        React.createElement("img", { className: "images", src: item.image, key: index, alt: "", width: "32px", height: "32px" }),
-                        React.createElement("div", { className: "flex--box" },
-                            React.createElement("span", null, item.name),
-                            React.createElement("span", null, item.email))),
-                    React.createElement("td", null, item.position),
-                    React.createElement("td", null, item.statusSeen ? React.createElement("div", { className: "svg--icon" },
-                        React.createElement(CheckSquare$1, { color: "#0BD7A4" }),
-                        React.createElement("span", { className: "selected" }, "Seen")) : React.createElement("div", { className: "svg--icon" },
-                        React.createElement(Square$1, { color: "#CBD5E1" }),
-                        React.createElement("span", { className: "not--selected" }, "Seen"))),
-                    React.createElement("td", null, item.statusSigned ? React.createElement("div", { className: "svg--icon" },
-                        React.createElement(CheckSquare$1, { color: "#0BD7A4" }),
-                        React.createElement("span", { className: "selected" }, "Signed")) : React.createElement("div", { className: "svg--icon" },
-                        React.createElement(Square$1, { color: "#CBD5E1" }),
-                        React.createElement("span", { className: "not--selected" }, "Signed")))));
-            }))));
+            React.createElement("tbody", null,
+                React.createElement("tr", null, ['Name', 'Position', 'Status', 'Status'].map(function (item, index) {
+                    return React.createElement("th", { key: index }, item);
+                })),
+                signoffTableData.map(function (item, index) {
+                    return (React.createElement("tr", { key: index },
+                        React.createElement("td", { className: "user--container" },
+                            React.createElement("img", { className: "images", src: item.image, key: index, alt: "", width: "32px", height: "32px" }),
+                            React.createElement("div", { className: "flex--box" },
+                                React.createElement("span", null, item.name),
+                                React.createElement("span", null, item.email))),
+                        React.createElement("td", null, item.position),
+                        React.createElement("td", null, item.statusSeen ? (React.createElement("div", { className: "svg--icon" },
+                            React.createElement(CheckSquare$1, { color: "#0BD7A4" }),
+                            React.createElement("span", { className: "selected" }, "Seen"))) : (React.createElement("div", { className: "svg--icon" },
+                            React.createElement(Square$1, { color: "#CBD5E1" }),
+                            React.createElement("span", { className: "not--selected" }, "Seen")))),
+                        React.createElement("td", null, item.statusSigned ? (React.createElement("div", { className: "svg--icon" },
+                            React.createElement(CheckSquare$1, { color: "#0BD7A4" }),
+                            React.createElement("span", { className: "selected" }, "Signed"))) : (React.createElement("div", { className: "svg--icon" },
+                            React.createElement(Square$1, { color: "#CBD5E1" }),
+                            React.createElement("span", { className: "not--selected" }, "Signed"))))));
+                })))));
 };
 
 export { ApplicationTable, Button, CompanyTable, EntityTable, MetricRange, PersonsTable, PoolCard, ProgressBar, ResearchTable, ScreeningTable, SignoffTable, StatusWidget };
