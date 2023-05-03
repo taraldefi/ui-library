@@ -1,5 +1,7 @@
 # Tariala UI Library
 
+Component library for the tariala frontend 
+
 ## Development
 
 ### Testing

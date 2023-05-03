@@ -26,6 +26,7 @@ jobs:
       id: package-version
       uses: phips28/gh-action-bump-version@v10.0.0
       with:
+        tag-prefix: "v"
         skip-verify: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
