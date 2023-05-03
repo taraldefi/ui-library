@@ -1,13 +1,13 @@
 // Generated with util/create-component.js
-import React, { useEffect, useState } from "react";
+import React from 'react';
 
-import { EntityType, EntityViewType } from "./Entity.types";
+import { EntityType } from './Entity.types';
 
-import "./Entity.scss";
+import './Entity.scss';
 
 export function Entity({ entityData, modal }: EntityType) {
   return (
-    <div className={"entityWrapper"}>
+    <div className={'entityWrapper'}>
       <div className="entityTopContent">
         <div className="entityImageContainer">
           <img
