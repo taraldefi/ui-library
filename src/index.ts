@@ -10,7 +10,7 @@ import {
   PersonsTable,
   ResearchTable
 } from './Table';
-
+import { DeleteModal } from './Modals';
 export {
   Button,
   PoolCard,
@@ -23,5 +23,6 @@ export {
   CompanyTable,
   ScreeningTable,
   PersonsTable,
-  ResearchTable
+  ResearchTable,
+  DeleteModal
 };
