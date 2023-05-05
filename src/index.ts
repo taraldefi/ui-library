@@ -11,7 +11,9 @@ import {
   ResearchTable
 } from './Table';
 import { DeleteModal } from './Modals';
+import { Entity } from './Entity';
 export {
+  Entity,
   Button,
   PoolCard,
   StatusWidget,
