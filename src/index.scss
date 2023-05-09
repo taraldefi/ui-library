@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
 
 :root {
   /* Add your CSS variables here */
@@ -12,7 +12,7 @@
   --heading-font-size: 40px;
   --subheading-font-size: 24px;
 
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,6 +1,6 @@
 import Button from './Button';
 import PoolCard from './PoolCard';
-import { StatusWidget, MetricRange, ProgressBar } from './Widgets';
+import { StatusWidget, MetricRange, ProgressBar, Activity } from './Widgets';
 import {
   ApplicationTable,
   EntityTable,
@@ -26,5 +26,6 @@ export {
   ScreeningTable,
   PersonsTable,
   ResearchTable,
-  DeleteModal
+  DeleteModal,
+  Activity
 };
