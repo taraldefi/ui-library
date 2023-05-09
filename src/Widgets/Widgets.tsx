@@ -1,71 +1,72 @@
 // Generated with util/create-component.js
-import React, { useEffect, useState } from "react";
-
+import React, { useEffect, useState } from 'react';
+import { X, Check } from 'react-feather';
 import {
   StatusWidgetProps,
   ProgressBarWidgetProps,
   MetricProps,
-} from "./Widgets.types";
+  ActivityProps
+} from './Widgets.types';
 
-import "./Widgets.scss";
+import './Widgets.scss';
 
 const colorHash = {
   active: {
-    bgcolor: "#D1FAE5",
-    color: "#059669",
+    bgcolor: '#D1FAE5',
+    color: '#059669'
   },
   change: {
-    bgcolor: "#FEE2E2",
-    color: "#EF4444",
+    bgcolor: '#FEE2E2',
+    color: '#EF4444'
   },
   review: {
-    bgcolor: "#FEF3C7",
-    color: "#F59E0B",
+    bgcolor: '#FEF3C7',
+    color: '#F59E0B'
   },
   completed: {
-    bgcolor: "#10B981",
-    color: "#ECFDF5",
-  },
+    bgcolor: '#10B981',
+    color: '#ECFDF5'
+  }
 };
 
 export function StatusWidget({ type, icon, showIcon }: StatusWidgetProps) {
   const [style, setStyle] = useState({});
-  const mode = showIcon ? "status--with--icon" : "status--without--icon";
+  const mode = showIcon ? 'status--with--icon' : 'status--without--icon';
   useEffect(() => {
     switch (type.toLowerCase()) {
-      case "up":
+      case 'up':
         setStyle({
           opacity: 1,
           backgroundColor: colorHash.active.bgcolor,
-          color: colorHash.active.color,
+          color: colorHash.active.color
         });
         break;
-      case "down":
+      case 'down':
         setStyle({
           opacity: 1,
           backgroundColor: colorHash.change.bgcolor,
-          color: colorHash.change.color,
+          color: colorHash.change.color
         });
         break;
-      case "change" || "not sent":
+      case 'change' || 'not sent':
         setStyle({
           opacity: 1,
           backgroundColor: colorHash.change.bgcolor,
-          color: colorHash.change.color,
+          color: colorHash.change.color
         });
         break;
-      case "review":
+      case 'review':
         setStyle({
           opacity: 1,
           backgroundColor: colorHash.review.bgcolor,
-          color: colorHash.review.color,
+          color: colorHash.review.color
         });
         break;
-      case "completed":
+      case 'completed':
         setStyle({
           opacity: 1,
           backgroundColor: colorHash.completed.bgcolor,
-          color: colorHash.completed.color,
+          color: colorHash.completed.color
         });
         break;
 
@@ -73,15 +74,15 @@ export function StatusWidget({ type, icon, showIcon }: StatusWidgetProps) {
         setStyle({
           opacity: 1,
           backgroundColor: colorHash.active.bgcolor,
-          color: colorHash.active.color,
+          color: colorHash.active.color
         });
         break;
     }
   }, [type]);
 
   return (
-    <div className={["status", mode].join(" ")} style={style}>
-      {showIcon ? icon : ""}
+    <div className={['status', mode].join(' ')} style={style}>
+      {showIcon ? icon : ''}
       {type}
     </div>
   );
@@ -90,7 +91,7 @@ export function StatusWidget({ type, icon, showIcon }: StatusWidgetProps) {
 export function ProgressBar({
   progress,
   color,
-  showText,
+  showText
 }: ProgressBarWidgetProps) {
   const [style, setStyle] = React.useState({});
 
@@ -98,7 +99,7 @@ export function ProgressBar({
     const newStyle = {
       opacity: 1,
       width: `${progress}%`,
-      backgroundColor: color,
+      backgroundColor: color
     };
 
     setStyle(newStyle);
@@ -106,7 +107,7 @@ export function ProgressBar({
 
   return (
     <div>
-      {showText ? <span>Overall Progress: {progress}%</span> : ""}
+      {showText ? <span>Overall Progress: {progress}%</span> : ''}
       <div className="progressbar">
         <div className="progressbar--done" style={style}></div>
       </div>
@@ -127,5 +128,20 @@ export const MetricRange = ({ value }: MetricProps) => {
         />
       </div>
     </>
+  );
+};
+
+export const Activity = ({ user, activity, status, date }: ActivityProps) => {
+  return (
+    <div className="activity--box">
+      <div className="status--box">{status ? <Check></Check> : <X></X>}</div>
+      <div className="detail--box">
+        <div className="content">
+          <span>{user}</span>
+          <span>{activity}</span>
+        </div>
+        <span>{date}</span>
+      </div>
+    </div>
   );
 };

@@ -4,7 +4,7 @@ import { boolean } from '@storybook/addon-knobs';
 import { DeleteModal } from './Modals';
 
 export default {
-  title: 'Modals/delete modal',
+  title: 'Modals',
   component: DeleteModal,
   argTypes: {
     title: 'string',
