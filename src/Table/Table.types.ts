@@ -67,7 +67,7 @@ export interface researchTableTypes {
   researchTableData: researchTableDataTypes[];
 }
 
-export interface signoffTabelDataTypes {
+export interface signOffTabelDataTypes {
   name: string;
   image: string;
   email: string;
@@ -76,6 +76,6 @@ export interface signoffTabelDataTypes {
   statusSigned: boolean;
 }
 
-export interface signoffTableTypes {
-  signoffTableData: signoffTabelDataTypes[];
+export interface signOffTableTypes {
+  signOffTableData: signOffTabelDataTypes[];
 }

@@ -13,7 +13,7 @@ import {
   companyTableType,
   screeningTableType,
   personsTableTypes,
-  signoffTableTypes
+  signOffTableTypes
 } from './Table.types';
 import './Table.scss';
 
@@ -288,8 +288,8 @@ export const ResearchTable: React.FC<researchTableTypes> = ({
   </div>
 );
 
-export const SignoffTable: React.FC<signoffTableTypes> = ({
-  signoffTableData
+export const SignOffTable: React.FC<signOffTableTypes> = ({
+  signOffTableData
 }) => (
   <div className="table">
     <table>
@@ -299,7 +299,7 @@ export const SignoffTable: React.FC<signoffTableTypes> = ({
             return <th key={index}>{item}</th>;
           })}
         </tr>
-        {signoffTableData.map((item, index) => {
+        {signOffTableData.map((item, index) => {
           return (
             <tr key={index}>
               <td className="user--container">

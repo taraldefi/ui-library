@@ -15,8 +15,8 @@ export default {
 
 const Template = (args) => <DeleteModal {...args}></DeleteModal>;
 
-export const example = Template.bind({});
-example.args = {
+export const deleteModal = Template.bind({});
+deleteModal.args = {
   title: 'delete entity name',
   isOpen: true,
   onClose: action('onClose')

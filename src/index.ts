@@ -5,7 +5,7 @@ import {
   ApplicationTable,
   EntityTable,
   CompanyTable,
-  SignoffTable,
+  SignOffTable,
   ScreeningTable,
   PersonsTable,
   ResearchTable
@@ -19,7 +19,7 @@ export {
   StatusWidget,
   MetricRange,
   ProgressBar,
-  SignoffTable,
+  SignOffTable,
   ApplicationTable,
   EntityTable,
   CompanyTable,

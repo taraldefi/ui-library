@@ -24,30 +24,30 @@ const ActivityWidgetTemplate: ComponentStory<typeof Activity> = (args) => (
   <Activity {...args} />
 );
 
-export const statusWidget = Template.bind({});
+export const status = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-statusWidget.args = {
+status.args = {
   type: 'Active',
   icon: <ArrowUp />,
   showIcon: true
 };
 
-export const progressBarWidget = ProgressBarWidgetTemplate.bind({});
+export const progressBar = ProgressBarWidgetTemplate.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-progressBarWidget.args = {
+progressBar.args = {
   progress: 40,
   color: '#04C1DE',
   showText: false
 };
 
-export const metricWidget = MetricRangeWidgetTemplate.bind({});
+export const metric = MetricRangeWidgetTemplate.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-metricWidget.args = {
+metric.args = {
   value: 30
 };
 
-export const activityWidget = ActivityWidgetTemplate.bind({});
-activityWidget.args = {
+export const activity = ActivityWidgetTemplate.bind({});
+activity.args = {
   user: 'Joergen Hoffman',
   activity: 'opened Exportfinanzierung mit HandEX',
   date: 'Oct 28th 2019 at 12:00 PM GMT +1',
