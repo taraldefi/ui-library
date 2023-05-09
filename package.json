@@ -1,6 +1,6 @@
 {
   "name": "@taraldefi/tariala-component-library",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
