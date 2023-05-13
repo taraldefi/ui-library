@@ -58,7 +58,7 @@ export interface personsTableTypes {
 
 export interface researchTableDataTypes {
   name: string;
-  image: string;
+  image?: string;
   Hit: string;
   Source: string;
 }
