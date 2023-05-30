@@ -1,3 +1,5 @@
+import { receiptTableTypes } from "../Table.types";
+
 export const ApplicationTableData = [
   {
     applicationId: 262116,
@@ -330,5 +332,36 @@ export const SignoffTabelData = [
     position: "Head of Credit",
     statusSeen: false,
     statusSigned: true,
+  }
+]
+
+export const ReceiptTableData = [
+  {
+    transactionDate: "January 7, 2023",
+    amount: 3000,
+    remainingBalance: 16000,
+    paymentMethod: "USD-Stablecoin",
+    url: "https://www.africau.edu/images/default/sample.pdf" 
+  },
+  {
+    transactionDate: "February 12, 2023",
+    amount: 3000,
+    remainingBalance: 13000,
+    paymentMethod: "USD-Stablecoin",
+    url: "https://www.google.com/" 
+  },
+  {
+    transactionDate: "March 19, 2023",
+    amount: 3000,
+    remainingBalance: 10000,
+    paymentMethod: "Direct Transfer",
+    url: "https://www.google.com/" 
+  },
+  {
+    transactionDate: "January 7, 2023",
+    amount: 3000,
+    remainingBalance: 7000,
+    paymentMethod: "USD-Stablecoin",
+    url: "https://www.google.com/" 
   }
 ]

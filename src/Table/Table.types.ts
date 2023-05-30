@@ -79,3 +79,26 @@ export interface signOffTabelDataTypes {
 export interface signOffTableTypes {
   signOffTableData: signOffTabelDataTypes[];
 }
+
+interface receiptTableDataTypes {
+  transactionDate: string;
+  amount: number;
+  remainingBalance: number;
+  paymentMethod: string;
+  url: string;
+}
+
+export interface receiptTableTypes {
+  receiptTableData: receiptTableDataTypes[];
+}
+
+interface repaymentTableDataTypes {
+  paymentId: string;
+  amount: number;
+  dueDate: string;
+  status: string;
+}
+
+export interface repaymentTableTypes {
+  repaymentTableData: repaymentTableDataTypes[];
+}
