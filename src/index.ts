@@ -8,10 +8,13 @@ import {
   SignOffTable,
   ScreeningTable,
   PersonsTable,
-  ResearchTable
+  ResearchTable,
+  ReceiptTable,
+  RepaymentTable
 } from './Table';
 import { DeleteModal } from './Modals';
 import { Entity } from './Entity';
+import { SmallLoanCard, LargeLoanCard } from './LoanCard';
 export {
   Entity,
   Button,
@@ -26,6 +29,10 @@ export {
   ScreeningTable,
   PersonsTable,
   ResearchTable,
+  ReceiptTable,
+  RepaymentTable,
+  SmallLoanCard,
+  LargeLoanCard,
   DeleteModal,
   Activity
 };

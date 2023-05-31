@@ -9,6 +9,7 @@ import {
   ResearchTable,
   ScreeningTable,
   ReceiptTable,
+  RepaymentTable,
 } from "./Table";
 import {
   ApplicationTableData,
@@ -19,6 +20,7 @@ import {
   ResearchTableData,
   SignoffTabelData,
   ReceiptTableData,
+  RepaymentTableData,
 } from "./data/data";
 export default {
   title: "Table",
@@ -51,4 +53,8 @@ export const Signoff = () => (
 
 export const receipt = () => (
   <ReceiptTable receiptTableData={ReceiptTableData} />
+);
+
+export const repayment = () => (
+  <RepaymentTable repaymentTableData={RepaymentTableData} />
 );
