@@ -49,7 +49,7 @@ export const LargeLoanCard: React.FC<LargeLoanCardProps> = ({
   value,
 }) => (
   <div data-testid="LoanCard" className="large--loan--card">
-    <div className="large--loan--card--content">
+    <div className="loan--card--container">
       <span>{value}</span>
       <p>USD-Stablecoin</p>
     </div>
