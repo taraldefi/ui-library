@@ -1,12 +1,12 @@
 // Generated with util/create-component.js
-import React from "react";
+import React from 'react';
 import {
   CheckSquare,
   Square,
   ExternalLink,
   MoreHorizontal,
   Printer,
-} from "react-feather";
+} from 'react-feather';
 import {
   applicationTableType,
   researchTableTypes,
@@ -17,8 +17,8 @@ import {
   signOffTableTypes,
   receiptTableTypes,
   repaymentTableTypes,
-} from "./Table.types";
-import "./Table.scss";
+} from './Table.types';
+import './Table.scss';
 
 export const ReceiptTable: React.FC<receiptTableTypes> = ({
   receiptTableData,
@@ -28,11 +28,11 @@ export const ReceiptTable: React.FC<receiptTableTypes> = ({
       <tbody>
         <tr className="title--row">
           {[
-            "Transaction Date",
-            "Amount",
-            "Remaining Balance",
-            "Payment Method",
-            "Options",
+            'Transaction Date',
+            'Amount',
+            'Remaining Balance',
+            'Payment Method',
+            'Options',
           ].map((item, index) => {
             return (
               <th key={index} className="title--headder">
@@ -68,7 +68,7 @@ export const RepaymentTable: React.FC<repaymentTableTypes> = ({
     <table>
       <tbody>
         <tr className="title--row">
-          {["Payment", "Amount", "Due Date", "status"].map((item, index) => {
+          {['Payment', 'Amount', 'Due Date', 'status'].map((item, index) => {
             return (
               <th key={index} className="title--headder">
                 {item}
@@ -99,13 +99,13 @@ export const ApplicationTable: React.FC<applicationTableType> = ({
       <tbody>
         <tr className="title--row">
           {[
-            "Application ID",
-            "Product",
-            "Date From",
-            "Date To",
-            "Importer ID",
-            "Importer Name",
-            "Status",
+            'Application ID',
+            'Product',
+            'Date From',
+            'Date To',
+            'Importer ID',
+            'Importer Name',
+            'Status',
           ].map((item, index) => {
             return (
               <th key={index} className="title--headder">
@@ -137,7 +137,7 @@ export const EntityTable: React.FC<entityTableType> = ({ entityTableData }) => (
     <table>
       <tbody>
         <tr className="status--title">
-          {["Title", "Issuance Date", "Maturity Date", "Facility Amount"].map(
+          {['Title', 'Issuance Date', 'Maturity Date', 'Facility Amount'].map(
             (item, index) => {
               return (
                 <th key={index} className="status--title--items">
@@ -171,7 +171,7 @@ export const CompanyTable: React.FC<companyTableType> = ({
       <tbody>
         <tr className="status--title">
           {/* <div className="statusTitle"> */}
-          {["Persons", "Details", "Source", "Status"].map((item, index) => {
+          {['Persons', 'Details', 'Source', 'Status'].map((item, index) => {
             return (
               <th key={index} className="statusTitleItems">
                 {item}
@@ -218,7 +218,7 @@ export const ScreeningTable: React.FC<screeningTableType> = ({
       <tbody>
         <tr className="status--title">
           {/* <div className="statusTitle"> */}
-          {["Persons", "Hit", "Source", "Options"].map((item, index) => {
+          {['Persons', 'Hit', 'Source', 'Options'].map((item, index) => {
             return (
               <th key={index} className="statusTitleItems">
                 {item}
@@ -252,17 +252,17 @@ export const ScreeningTable: React.FC<screeningTableType> = ({
 export const PersonsTable: React.FC<personsTableTypes> = ({
   personsTableData,
 }) => (
-  <div className={"table"}>
+  <div className={'table'}>
     <table>
       <tbody>
         <tr className="status--title">
           {[
-            "Persons",
-            "Email",
-            "Position",
-            "Verification Status",
-            "Status Verification",
-            "Options",
+            'Persons',
+            'Email',
+            'Position',
+            'Verification Status',
+            'Status Verification',
+            'Options',
           ].map((item, index) => {
             return <th key={index}>{item}</th>;
           })}
@@ -323,7 +323,7 @@ export const ResearchTable: React.FC<researchTableTypes> = ({
       <tbody>
         <tr className="status--title">
           {/* <div className="statusTitle"> */}
-          {["Persons", "Hit", "Source", "Options"].map((item, index) => {
+          {['Persons', 'Hit', 'Source', 'Options'].map((item, index) => {
             return <th key={index}>{item}</th>;
           })}
           {/* </div> */}
@@ -369,7 +369,7 @@ export const SignOffTable: React.FC<signOffTableTypes> = ({
     <table>
       <tbody>
         <tr>
-          {["Name", "Position", "Status", "Status"].map((item, index) => {
+          {['Name', 'Position', 'Status', 'Status'].map((item, index) => {
             return <th key={index}>{item}</th>;
           })}
         </tr>
