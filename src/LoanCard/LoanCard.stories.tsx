@@ -1,10 +1,11 @@
 // Generated with util/create-component.js
-import React from "react";
-import { SmallLoanCard, LargeLoanCard } from "./LoanCard";
-import { LoanCardTypes } from "./LoanCard.types";
+import React from 'react';
+import { SmallLoanCard, LargeLoanCard, PaymentSuccessCard } from './LoanCard';
+import { LoanCardTypes } from './LoanCard.types';
+import { date } from '@storybook/addon-knobs';
 
 export default {
-  title: "LoanCard",
+  title: 'LoanCard',
 };
 
 export const interestRate = () => (
@@ -29,4 +30,16 @@ export const loanAmount = () => (
 
 export const outstandingAmount = () => (
   <LargeLoanCard type={LoanCardTypes.OUTSTANDING_AMT} value="12,345.67" />
+);
+
+export const paymentSuccess = () => (
+  <PaymentSuccessCard
+    onPrint={() => {}}
+    onBack={() => {}}
+    paymentDetails={{
+      amount: 2000,
+      date: 'March 19, 2023',
+      method: 'USD-Stablecoin',
+    }}
+  ></PaymentSuccessCard>
 );

@@ -5,9 +5,11 @@ import {
   SmallLoanCardProps,
   LargeLoanCardProps,
   LoanCardTypes,
+  PaymentSuccessCardProps,
 } from './LoanCard.types';
 
 import './LoanCard.scss';
+import Button from '../Button';
 
 const rightContainer = (type: LoanCardTypes) => {
   switch (type.toUpperCase()) {
@@ -54,5 +56,45 @@ export const LargeLoanCard: React.FC<LargeLoanCardProps> = ({
       <p>USD-Stablecoin</p>
     </div>
     <span>{type == 'LOAN_AMT' ? 'Loan Amount' : 'Outstanding Balance'}</span>
+  </div>
+);
+
+export const PaymentSuccessCard: React.FC<PaymentSuccessCardProps> = ({
+  onPrint,
+  onBack,
+  paymentDetails,
+}) => (
+  <div className="payment--success--card">
+    <h1>Payment Successful!</h1>
+    <span>
+      Your payment transaction was successful. Thanks for using Tariala.
+    </span>
+    <div className="content--container">
+      <div className="content--left">
+        <span>Payment Amount</span>
+        <span>Payment Method</span>
+        <span>Transaction Date</span>
+      </div>
+      <div className="content--right">
+        <span>{paymentDetails.amount}</span>
+        <span>{paymentDetails.method}</span>
+        <span>{paymentDetails.date}</span>
+      </div>
+    </div>
+
+    <div className="two--button--container">
+      <Button
+        label="PRINT RECEIPT"
+        onClick={() => {
+          onPrint();
+        }}
+      ></Button>
+      <Button
+        label="BACK HOME"
+        onClick={() => {
+          onBack();
+        }}
+      ></Button>
+    </div>
   </div>
 );
