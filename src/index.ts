@@ -14,7 +14,7 @@ import {
 } from './Table';
 import { DeleteModal } from './Modals';
 import { Entity } from './Entity';
-import { SmallLoanCard, LargeLoanCard } from './LoanCard';
+import { SmallLoanCard, LargeLoanCard, PaymentSuccessCard } from './LoanCard';
 export {
   Entity,
   Button,
@@ -33,6 +33,7 @@ export {
   RepaymentTable,
   SmallLoanCard,
   LargeLoanCard,
+  PaymentSuccessCard,
   DeleteModal,
   Activity
 };

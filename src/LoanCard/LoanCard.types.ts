@@ -19,4 +19,16 @@ export interface LargeLoanCardProps {
     value: string;
 }
 
+interface paymentDetails {
+    date: string;
+    amount: number;
+    method: string;
+}
+
+export interface PaymentSuccessCardProps {
+    onPrint : () => void;
+    onBack : () => void;
+    paymentDetails: paymentDetails;
+}
+
 
