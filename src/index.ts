@@ -15,6 +15,7 @@ import {
 import { DeleteModal } from './Modals';
 import { Entity } from './Entity';
 import { SmallLoanCard, LargeLoanCard, PaymentSuccessCard } from './LoanCard';
+import { ProfileAddressCard, ProfilePersonalCard } from './ProfileCard';
 export {
   Entity,
   Button,
@@ -34,6 +35,8 @@ export {
   SmallLoanCard,
   LargeLoanCard,
   PaymentSuccessCard,
+  ProfileAddressCard,
+  ProfilePersonalCard,
   DeleteModal,
   Activity
 };
