@@ -69,6 +69,41 @@
     font-size: 14px;
   }
 
+  .process--tab {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 24px;
+    width: 400px;
+  }
+
+  .image--container {
+    :nth-child(1) {
+      left: 12px;
+    }
+
+    :nth-child(3) {
+      right: 12px;
+    }
+
+    :nth-child(4) {
+      right: 24px;
+    }
+
+    :nth-child(5) {
+      right: 36px;
+    }
+
+    .images {
+      border-radius: 50%;
+      // border: 1px solid #ffffff;
+      position: relative;
+    }
+  }
+
+  .date {
+    margin-right: 26px;
+  }
+
   .hit--tab {
     font-size: 11px;
     font-weight: normal;

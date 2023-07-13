@@ -10,7 +10,8 @@ import {
   PersonsTable,
   ResearchTable,
   ReceiptTable,
-  RepaymentTable
+  RepaymentTable,
+  OverviewTable,
 } from './Table';
 import { DeleteModal } from './Modals';
 import { Entity } from './Entity';
@@ -32,11 +33,12 @@ export {
   ResearchTable,
   ReceiptTable,
   RepaymentTable,
+  OverviewTable,
   SmallLoanCard,
   LargeLoanCard,
   PaymentSuccessCard,
   ProfileAddressCard,
   ProfilePersonalCard,
   DeleteModal,
-  Activity
+  Activity,
 };

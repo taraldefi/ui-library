@@ -9,18 +9,20 @@ import {
 } from 'react-feather';
 import {
   applicationTableType,
-  researchTableTypes,
+  researchTableType,
   entityTableType,
   companyTableType,
   screeningTableType,
-  personsTableTypes,
-  signOffTableTypes,
-  receiptTableTypes,
-  repaymentTableTypes,
+  personsTableType,
+  signOffTableType,
+  receiptTableType,
+  repaymentTableType,
+  overviewTableType,
 } from './Table.types';
 import './Table.scss';
+import { ProgressBar, StatusWidget } from '../Widgets';
 
-export const ReceiptTable: React.FC<receiptTableTypes> = ({
+export const ReceiptTable: React.FC<receiptTableType> = ({
   receiptTableData,
 }) => (
   <div className="table">
@@ -61,7 +63,7 @@ export const ReceiptTable: React.FC<receiptTableTypes> = ({
   </div>
 );
 
-export const RepaymentTable: React.FC<repaymentTableTypes> = ({
+export const RepaymentTable: React.FC<repaymentTableType> = ({
   repaymentTableData,
 }) => (
   <div className="table">
@@ -249,7 +251,7 @@ export const ScreeningTable: React.FC<screeningTableType> = ({
   </div>
 );
 
-export const PersonsTable: React.FC<personsTableTypes> = ({
+export const PersonsTable: React.FC<personsTableType> = ({
   personsTableData,
 }) => (
   <div className={'table'}>
@@ -315,7 +317,7 @@ export const PersonsTable: React.FC<personsTableTypes> = ({
   </div>
 );
 
-export const ResearchTable: React.FC<researchTableTypes> = ({
+export const ResearchTable: React.FC<researchTableType> = ({
   researchTableData,
 }) => (
   <div className="table">
@@ -362,7 +364,7 @@ export const ResearchTable: React.FC<researchTableTypes> = ({
   </div>
 );
 
-export const SignOffTable: React.FC<signOffTableTypes> = ({
+export const SignOffTable: React.FC<signOffTableType> = ({
   signOffTableData,
 }) => (
   <div className="table">
@@ -417,6 +419,60 @@ export const SignOffTable: React.FC<signOffTableTypes> = ({
                   </div>
                 )}
               </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+);
+
+export const OverviewTable: React.FC<overviewTableType> = ({
+  overviewTableData,
+}) => (
+  <div className="table">
+    <table>
+      <tbody>
+        <tr>
+          {['Process', 'Users', 'Progress', 'Status', 'Date'].map(
+            (item, index) => {
+              return <th key={index}>{item}</th>;
+            }
+          )}
+        </tr>
+        {overviewTableData.map((item, index) => {
+          return (
+            <tr key={index}>
+              <td className="process--tab">{item.process}</td>
+              <td className="image--container">
+                {overviewTableData[index].users.map((item, index) => {
+                  return (
+                    <img
+                      className="images"
+                      src={item}
+                      key={index}
+                      alt=""
+                      width={30}
+                      height={30}
+                    ></img>
+                  );
+                })}
+              </td>
+              <td>
+                <ProgressBar
+                  progress={item.progress}
+                  color={'#04C1DE'}
+                  showText={false}
+                />
+              </td>
+              <td>
+                <StatusWidget
+                  type={item.status}
+                  showIcon={false}
+                ></StatusWidget>
+              </td>
+
+              <td className="date">{item.date}</td>
             </tr>
           );
         })}

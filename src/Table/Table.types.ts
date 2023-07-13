@@ -43,7 +43,7 @@ export interface screeningTableType {
   screeningTableData: screeningTableDataType[];
 }
 
-export interface personsTableDataTypes {
+export interface personsTableDataType {
   name: string;
   image: string;
   email: string;
@@ -52,22 +52,22 @@ export interface personsTableDataTypes {
   isDone: boolean;
 }
 
-export interface personsTableTypes {
-  personsTableData: personsTableDataTypes[];
+export interface personsTableType {
+  personsTableData: personsTableDataType[];
 }
 
-export interface researchTableDataTypes {
+export interface researchTableDataType {
   name: string;
   image?: string;
   Hit: string;
   Source: string;
 }
 
-export interface researchTableTypes {
-  researchTableData: researchTableDataTypes[];
+export interface researchTableType {
+  researchTableData: researchTableDataType[];
 }
 
-export interface signOffTabelDataTypes {
+export interface signOffTabelDataType {
   name: string;
   image: string;
   email: string;
@@ -76,11 +76,11 @@ export interface signOffTabelDataTypes {
   statusSigned: boolean;
 }
 
-export interface signOffTableTypes {
-  signOffTableData: signOffTabelDataTypes[];
+export interface signOffTableType {
+  signOffTableData: signOffTabelDataType[];
 }
 
-interface receiptTableDataTypes {
+interface receiptTableDataType {
   transactionDate: string;
   amount: number;
   remainingBalance: number;
@@ -88,17 +88,29 @@ interface receiptTableDataTypes {
   url: string;
 }
 
-export interface receiptTableTypes {
-  receiptTableData: receiptTableDataTypes[];
+export interface receiptTableType {
+  receiptTableData: receiptTableDataType[];
 }
 
-interface repaymentTableDataTypes {
+interface repaymentTableDataType {
   paymentId: string;
   amount: number;
   dueDate: string;
   status: string;
 }
 
-export interface repaymentTableTypes {
-  repaymentTableData: repaymentTableDataTypes[];
+export interface repaymentTableType {
+  repaymentTableData: repaymentTableDataType[];
+}
+
+export interface overviewTableDataType {
+  process: string;
+  users: string[];
+  progress: number;
+  status: any;
+  date: string;
+}
+
+export interface overviewTableType {
+  overviewTableData: overviewTableDataType[];
 }

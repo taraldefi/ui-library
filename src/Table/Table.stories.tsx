@@ -1,5 +1,5 @@
 // Generated with util/create-component.js
-import React from "react";
+import React from 'react';
 import {
   ApplicationTable,
   CompanyTable,
@@ -10,7 +10,8 @@ import {
   ScreeningTable,
   ReceiptTable,
   RepaymentTable,
-} from "./Table";
+  OverviewTable,
+} from './Table';
 import {
   ApplicationTableData,
   CompanyTableData,
@@ -21,9 +22,10 @@ import {
   SignoffTabelData,
   ReceiptTableData,
   RepaymentTableData,
-} from "./data/data";
+  OverviewTableData,
+} from './data/data';
 export default {
-  title: "Table",
+  title: 'Table',
 };
 
 export const Application = () => (
@@ -57,4 +59,8 @@ export const receipt = () => (
 
 export const repayment = () => (
   <RepaymentTable repaymentTableData={RepaymentTableData} />
+);
+
+export const overview = () => (
+  <OverviewTable overviewTableData={OverviewTableData} />
 );
