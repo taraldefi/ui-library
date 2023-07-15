@@ -11,6 +11,7 @@ import {
   ReceiptTable,
   RepaymentTable,
   OverviewTable,
+  AuditTable,
 } from './Table';
 import {
   ApplicationTableData,
@@ -23,6 +24,7 @@ import {
   ReceiptTableData,
   RepaymentTableData,
   OverviewTableData,
+  AuditTableData,
 } from './data/data';
 export default {
   title: 'Table',
@@ -64,3 +66,5 @@ export const repayment = () => (
 export const overview = () => (
   <OverviewTable overviewTableData={OverviewTableData} />
 );
+
+export const audit = () => <AuditTable auditTableData={AuditTableData} />;
