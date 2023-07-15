@@ -18,6 +18,7 @@ import {
   receiptTableType,
   repaymentTableType,
   overviewTableType,
+  auditTableType,
 } from './Table.types';
 import './Table.scss';
 import { ProgressBar, StatusWidget } from '../Widgets';
@@ -468,6 +469,55 @@ export const OverviewTable: React.FC<overviewTableType> = ({
               <td>
                 <StatusWidget
                   type={item.status}
+                  showIcon={false}
+                ></StatusWidget>
+              </td>
+
+              <td className="date">{item.date}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+);
+
+export const AuditTable: React.FC<auditTableType> = ({ auditTableData }) => (
+  <div className="table">
+    <table>
+      <tbody>
+        <tr>
+          {['Action', 'User', 'Activity', 'Date'].map((item, index) => {
+            return <th key={index}>{item}</th>;
+          })}
+        </tr>
+        {auditTableData.map((item, index) => {
+          return (
+            <tr key={index}>
+              <td className="process--tab">{item.action}</td>
+              <td>
+                <div
+                  style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}
+                  className="image--container"
+                >
+                  <img
+                    className="images"
+                    src={item.user.avatar}
+                    key={index}
+                    alt=""
+                    width={30}
+                    height={30}
+                  ></img>
+                  <div className="name--container">
+                    <span>{item.user.name}</span>
+                    <span>{item.user.email}</span>
+                  </div>
+                </div>
+              </td>
+
+              <td className="activity">
+                <StatusWidget
+                  type={item.activity}
                   showIcon={false}
                 ></StatusWidget>
               </td>

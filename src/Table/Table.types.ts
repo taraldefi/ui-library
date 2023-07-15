@@ -114,3 +114,20 @@ export interface overviewTableDataType {
 export interface overviewTableType {
   overviewTableData: overviewTableDataType[];
 }
+
+interface auditUser {
+  avatar: string;
+  name: string;
+  email: string;
+}
+
+export interface auditTableDataType {
+  action: string;
+  user: auditUser;
+  activity: any;
+  date: string;
+}
+
+export interface auditTableType {
+  auditTableData: auditTableDataType[];
+}

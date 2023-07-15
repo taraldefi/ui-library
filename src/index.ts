@@ -12,6 +12,7 @@ import {
   ReceiptTable,
   RepaymentTable,
   OverviewTable,
+  AuditTable,
 } from './Table';
 import { DeleteModal } from './Modals';
 import { Entity } from './Entity';
@@ -34,6 +35,7 @@ export {
   ReceiptTable,
   RepaymentTable,
   OverviewTable,
+  AuditTable,
   SmallLoanCard,
   LargeLoanCard,
   PaymentSuccessCard,

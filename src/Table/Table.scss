@@ -97,6 +97,32 @@
       // border: 1px solid #ffffff;
       position: relative;
     }
+    .name--container {
+      display: flex;
+      flex-direction: column;
+      width: 242px;
+      height: 35px;
+      align-items: flex-start;
+      margin-left: 12px;
+      :nth-child(1) {
+        font-weight: bolder;
+        font-size: 14px;
+      }
+      :nth-child(2) {
+        color: #64748b;
+        font-size: 12px;
+      }
+    }
+  }
+  .activity {
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    :nth-child(1) {
+      height: min-content;
+      width: min-content;
+    }
   }
 
   .date {
