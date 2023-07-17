@@ -549,7 +549,7 @@ export const TaskTable: React.FC<taskTableType> = ({
           onClick={() => setToggle(!toggle)}
         ></Button>
       </div>
-      <div className={'table ' + (toggle && 'active')}>
+      <div className="table">
         <table>
           <tbody>
             <tr>
@@ -557,59 +557,113 @@ export const TaskTable: React.FC<taskTableType> = ({
                 return <th key={index}>{item}</th>;
               })}
             </tr>
-            {taskTableData.map((item, index) => {
-              return (
-                <tr key={index}>
-                  <td>
-                    <div
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        gap: '10px',
-                        alignItems: 'center',
-                      }}
-                    >
-                      <img
-                        className="images"
-                        src={item.assignee.user}
-                        key={index}
-                        alt=""
-                        width={30}
-                        height={30}
-                      ></img>
+            {toggle
+              ? taskTableData.map((item, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>
+                        <div
+                          style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            gap: '10px',
+                            alignItems: 'center',
+                          }}
+                        >
+                          <img
+                            className="images"
+                            src={item.assignee.user}
+                            key={index}
+                            alt=""
+                            width={30}
+                            height={30}
+                          ></img>
 
-                      <span>{item.assignee.name}</span>
-                    </div>
-                  </td>
-                  <td className="task--list">
-                    <span>{item.task.title}</span>
-                    <span>{item.task.description}</span>
-                  </td>
-                  <td>
-                    <div
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        gap: '10px',
-                        alignItems: 'center',
-                      }}
-                    >
-                      <img
-                        className="images"
-                        src={item.assignor.user}
-                        key={index}
-                        alt=""
-                        width={30}
-                        height={30}
-                      ></img>
+                          <span>{item.assignee.name}</span>
+                        </div>
+                      </td>
+                      <td className="task--list">
+                        <span>{item.task.title}</span>
+                        <span>{item.task.description}</span>
+                      </td>
+                      <td>
+                        <div
+                          style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            gap: '10px',
+                            alignItems: 'center',
+                          }}
+                        >
+                          <img
+                            className="images"
+                            src={item.assignor.user}
+                            key={index}
+                            alt=""
+                            width={30}
+                            height={30}
+                          ></img>
 
-                      <span>{item.assignor.name}</span>
-                    </div>
-                  </td>
-                  <td className="date">{item.date}</td>
-                </tr>
-              );
-            })}
+                          <span>{item.assignor.name}</span>
+                        </div>
+                      </td>
+                      <td className="date">{item.date}</td>
+                    </tr>
+                  );
+                })
+              : taskTableData.slice(0, 3).map((item, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>
+                        <div
+                          style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            gap: '10px',
+                            alignItems: 'center',
+                          }}
+                        >
+                          <img
+                            className="images"
+                            src={item.assignee.user}
+                            key={index}
+                            alt=""
+                            width={30}
+                            height={30}
+                          ></img>
+
+                          <span>{item.assignee.name}</span>
+                        </div>
+                      </td>
+                      <td className="task--list">
+                        <span>{item.task.title}</span>
+                        <span>{item.task.description}</span>
+                      </td>
+                      <td>
+                        <div
+                          style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            gap: '10px',
+                            alignItems: 'center',
+                          }}
+                        >
+                          <img
+                            className="images"
+                            src={item.assignor.user}
+                            key={index}
+                            alt=""
+                            width={30}
+                            height={30}
+                          ></img>
+
+                          <span>{item.assignor.name}</span>
+                        </div>
+                      </td>
+                      <td className="date">{item.date}</td>
+                    </tr>
+                  );
+                })}
           </tbody>
         </table>
       </div>
@@ -632,7 +686,7 @@ export const TeamTable: React.FC<teamTableType> = ({
           onClick={() => setTeamToggle(!Teamtoggle)}
         ></Button>
       </div>
-      <div className={'table ' + (Teamtoggle && 'active')}>
+      <div className="table">
         <table>
           <tbody>
             <tr>
@@ -642,40 +696,75 @@ export const TeamTable: React.FC<teamTableType> = ({
                 }
               )}
             </tr>
-            {teamTableData.map((item, index) => {
-              return (
-                <tr key={index}>
-                  <td>
-                    <div
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        gap: '10px',
-                        alignItems: 'center',
-                      }}
-                    >
-                      <img
-                        className="images"
-                        src={item.member.user}
-                        key={index}
-                        alt=""
-                        width={30}
-                        height={30}
-                      ></img>
+            {Teamtoggle
+              ? teamTableData.map((item, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>
+                        <div
+                          style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            gap: '10px',
+                            alignItems: 'center',
+                          }}
+                        >
+                          <img
+                            className="images"
+                            src={item.member.user}
+                            key={index}
+                            alt=""
+                            width={30}
+                            height={30}
+                          ></img>
 
-                      <span>{item.member.name}</span>
-                    </div>
-                  </td>
-                  <td>
-                    <span>{item.department}</span>
-                  </td>
-                  <td>
-                    <span>{item.lastAction}</span>
-                  </td>
-                  <td className="date">{item.dateOfAction}</td>
-                </tr>
-              );
-            })}
+                          <span>{item.member.name}</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span>{item.department}</span>
+                      </td>
+                      <td>
+                        <span>{item.lastAction}</span>
+                      </td>
+                      <td className="date">{item.dateOfAction}</td>
+                    </tr>
+                  );
+                })
+              : teamTableData.slice(0, 3).map((item, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>
+                        <div
+                          style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            gap: '10px',
+                            alignItems: 'center',
+                          }}
+                        >
+                          <img
+                            className="images"
+                            src={item.member.user}
+                            key={index}
+                            alt=""
+                            width={30}
+                            height={30}
+                          ></img>
+
+                          <span>{item.member.name}</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span>{item.department}</span>
+                      </td>
+                      <td>
+                        <span>{item.lastAction}</span>
+                      </td>
+                      <td className="date">{item.dateOfAction}</td>
+                    </tr>
+                  );
+                })}
           </tbody>
         </table>
       </div>
