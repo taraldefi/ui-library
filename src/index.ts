@@ -13,6 +13,8 @@ import {
   RepaymentTable,
   OverviewTable,
   AuditTable,
+  TaskTable,
+  TeamTable,
 } from './Table';
 import { DeleteModal } from './Modals';
 import { Entity } from './Entity';
@@ -36,6 +38,8 @@ export {
   RepaymentTable,
   OverviewTable,
   AuditTable,
+  TaskTable,
+  TeamTable,
   SmallLoanCard,
   LargeLoanCard,
   PaymentSuccessCard,
