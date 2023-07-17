@@ -621,7 +621,7 @@ export const TeamTable: React.FC<teamTableType> = ({
   teamTableData,
   value,
 }) => {
-  const [toggle, setToggle] = React.useState(true);
+  const [Teamtoggle, setTeamToggle] = React.useState(true);
 
   return (
     <>
@@ -629,10 +629,10 @@ export const TeamTable: React.FC<teamTableType> = ({
         <span>MEMBERS ({value})</span>
         <Button
           label="View All Members"
-          onClick={() => setToggle(!toggle)}
+          onClick={() => setTeamToggle(!Teamtoggle)}
         ></Button>
       </div>
-      <div className={'table ' + (toggle && 'active')}>
+      <div className={'table ' + (Teamtoggle && 'active')}>
         <table>
           <tbody>
             <tr>
