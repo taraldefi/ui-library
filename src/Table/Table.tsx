@@ -666,20 +666,11 @@ export const TeamTable: React.FC<teamTableType> = ({
                       <span>{item.member.name}</span>
                     </div>
                   </td>
-                  <td className="task--list">
+                  <td>
                     <span>{item.department}</span>
                   </td>
                   <td>
-                    <div
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        gap: '10px',
-                        alignItems: 'center',
-                      }}
-                    >
-                      <span>{item.lastAction}</span>
-                    </div>
+                    <span>{item.lastAction}</span>
                   </td>
                   <td className="date">{item.dateOfAction}</td>
                 </tr>
