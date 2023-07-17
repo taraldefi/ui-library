@@ -1,8 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
-import { SmallLoanCard, LargeLoanCard, PaymentSuccessCard } from './LoanCard';
+import { LargeLoanCard, PaymentSuccessCard, SmallLoanCard } from './LoanCard';
 import { LoanCardTypes } from './LoanCard.types';
-import { date } from '@storybook/addon-knobs';
 
 export default {
   title: 'LoanCard',

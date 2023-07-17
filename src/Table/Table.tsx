@@ -19,9 +19,12 @@ import {
   repaymentTableType,
   overviewTableType,
   auditTableType,
+  taskTableType,
+  teamTableType,
 } from './Table.types';
 import './Table.scss';
 import { ProgressBar, StatusWidget } from '../Widgets';
+import Button from '../Button';
 
 export const ReceiptTable: React.FC<receiptTableType> = ({
   receiptTableData,
@@ -530,3 +533,161 @@ export const AuditTable: React.FC<auditTableType> = ({ auditTableData }) => (
     </table>
   </div>
 );
+
+export const TaskTable: React.FC<taskTableType> = ({
+  taskTableData,
+  value,
+}) => {
+  const [toggle, setToggle] = React.useState(true);
+
+  return (
+    <>
+      <div className="task--box">
+        <span>TASKS ({value})</span>
+        <Button
+          label="View All Tasks"
+          onClick={() => setToggle(!toggle)}
+        ></Button>
+      </div>
+      <div className={'table ' + (toggle && 'active')}>
+        <table>
+          <tbody>
+            <tr>
+              {['Assignee', 'Task', 'Assignor', 'Date'].map((item, index) => {
+                return <th key={index}>{item}</th>;
+              })}
+            </tr>
+            {taskTableData.map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td>
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        gap: '10px',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <img
+                        className="images"
+                        src={item.assignee.user}
+                        key={index}
+                        alt=""
+                        width={30}
+                        height={30}
+                      ></img>
+
+                      <span>{item.assignee.name}</span>
+                    </div>
+                  </td>
+                  <td className="task--list">
+                    <span>{item.task.title}</span>
+                    <span>{item.task.description}</span>
+                  </td>
+                  <td>
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        gap: '10px',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <img
+                        className="images"
+                        src={item.assignor.user}
+                        key={index}
+                        alt=""
+                        width={30}
+                        height={30}
+                      ></img>
+
+                      <span>{item.assignor.name}</span>
+                    </div>
+                  </td>
+                  <td className="date">{item.date}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+};
+
+export const TeamTable: React.FC<teamTableType> = ({
+  teamTableData,
+  value,
+}) => {
+  const [toggle, setToggle] = React.useState(true);
+
+  return (
+    <>
+      <div className="task--box">
+        <span>MEMBERS ({value})</span>
+        <Button
+          label="View All Members"
+          onClick={() => setToggle(!toggle)}
+        ></Button>
+      </div>
+      <div className={'table ' + (toggle && 'active')}>
+        <table>
+          <tbody>
+            <tr>
+              {['Member', 'Department', 'Last Action', 'Date of Action'].map(
+                (item, index) => {
+                  return <th key={index}>{item}</th>;
+                }
+              )}
+            </tr>
+            {teamTableData.map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td>
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        gap: '10px',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <img
+                        className="images"
+                        src={item.member.user}
+                        key={index}
+                        alt=""
+                        width={30}
+                        height={30}
+                      ></img>
+
+                      <span>{item.member.name}</span>
+                    </div>
+                  </td>
+                  <td className="task--list">
+                    <span>{item.department}</span>
+                  </td>
+                  <td>
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        gap: '10px',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <span>{item.lastAction}</span>
+                    </div>
+                  </td>
+                  <td className="date">{item.dateOfAction}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+};

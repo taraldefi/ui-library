@@ -2,29 +2,33 @@
 import React from 'react';
 import {
   ApplicationTable,
+  AuditTable,
   CompanyTable,
-  SignOffTable,
   EntityTable,
+  OverviewTable,
   PersonsTable,
-  ResearchTable,
-  ScreeningTable,
   ReceiptTable,
   RepaymentTable,
-  OverviewTable,
-  AuditTable,
+  ResearchTable,
+  ScreeningTable,
+  SignOffTable,
+  TaskTable,
+  TeamTable,
 } from './Table';
 import {
   ApplicationTableData,
+  AuditTableData,
   CompanyTableData,
   EntityTableData,
-  ScreeningTableData,
+  OverviewTableData,
   PersonsTableData,
-  ResearchTableData,
-  SignoffTabelData,
   ReceiptTableData,
   RepaymentTableData,
-  OverviewTableData,
-  AuditTableData,
+  ResearchTableData,
+  ScreeningTableData,
+  SignoffTabelData,
+  TaskTableData,
+  TeamTableData,
 } from './data/data';
 export default {
   title: 'Table',
@@ -68,3 +72,11 @@ export const overview = () => (
 );
 
 export const audit = () => <AuditTable auditTableData={AuditTableData} />;
+
+export const task = () => (
+  <TaskTable taskTableData={TaskTableData} value={TaskTableData.length} />
+);
+
+export const team = () => (
+  <TeamTable teamTableData={TeamTableData} value={TeamTableData.length} />
+);
