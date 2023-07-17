@@ -1,26 +1,26 @@
 // Generated with util/create-component.js
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 import React from 'react';
-import { StatusWidget, ProgressBar, MetricRange, Activity } from './Widgets';
 import { ArrowUp } from 'react-feather';
+import { Activity, MetricRange, ProgressBar, StatusWidget } from './Widgets';
 
 export default {
-  title: 'Widgets'
+  title: 'Widgets',
 };
 
-const Template: ComponentStory<typeof StatusWidget> = (args) => (
+const Template: StoryFn<typeof StatusWidget> = (args) => (
   <StatusWidget {...args} />
 );
 
-const ProgressBarWidgetTemplate: ComponentStory<typeof ProgressBar> = (
-  args
-) => <ProgressBar {...args} />;
+const ProgressBarWidgetTemplate: StoryFn<typeof ProgressBar> = (args) => (
+  <ProgressBar {...args} />
+);
 
-const MetricRangeWidgetTemplate: ComponentStory<typeof MetricRange> = (
-  args
-) => <MetricRange {...args} />;
+const MetricRangeWidgetTemplate: StoryFn<typeof MetricRange> = (args) => (
+  <MetricRange {...args} />
+);
 
-const ActivityWidgetTemplate: ComponentStory<typeof Activity> = (args) => (
+const ActivityWidgetTemplate: StoryFn<typeof Activity> = (args) => (
   <Activity {...args} />
 );
 
@@ -29,7 +29,7 @@ export const status = Template.bind({});
 status.args = {
   type: 'Active',
   icon: <ArrowUp />,
-  showIcon: true
+  showIcon: true,
 };
 
 export const progressBar = ProgressBarWidgetTemplate.bind({});
@@ -37,13 +37,13 @@ export const progressBar = ProgressBarWidgetTemplate.bind({});
 progressBar.args = {
   progress: 40,
   color: '#04C1DE',
-  showText: false
+  showText: false,
 };
 
 export const metric = MetricRangeWidgetTemplate.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 metric.args = {
-  value: 30
+  value: 30,
 };
 
 export const activity = ActivityWidgetTemplate.bind({});
@@ -51,5 +51,5 @@ activity.args = {
   user: 'Joergen Hoffman',
   activity: 'opened Exportfinanzierung mit HandEX',
   date: 'Oct 28th 2019 at 12:00 PM GMT +1',
-  status: true
+  status: true,
 };

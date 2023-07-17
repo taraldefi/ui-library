@@ -115,8 +115,6 @@
     }
   }
   .activity {
-    height: 70px;
-    display: flex;
     align-items: center;
 
     :nth-child(1) {
@@ -262,5 +260,54 @@
         font-size: 12px;
       }
     }
+  }
+}
+
+.task--box {
+  font-family: 'inter', sans-serif;
+  margin-bottom: 16px;
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    color: #64748b;
+    font-size: 14px;
+  }
+  .button--secondary {
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #64748b;
+    height: 34px;
+  }
+}
+
+.active {
+  height: 250px;
+}
+
+.task--list {
+  padding-left: 24px;
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+
+  :nth-child(1) {
+    font-weight: bolder;
+    font-size: 14px;
+  }
+
+  :nth-child(2) {
+    font-size: 13px;
+    color: #475569;
   }
 }

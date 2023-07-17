@@ -131,3 +131,36 @@ export interface auditTableDataType {
 export interface auditTableType {
   auditTableData: auditTableDataType[];
 }
+
+export interface taskTableDataType {
+  assignee: taskUser;
+  task: taskList;
+  assignor: taskUser;
+  date: string;
+}
+interface taskList {
+  title: string;
+  description: string;
+}
+
+interface taskUser {
+  user: string;
+  name: string;
+}
+
+export interface taskTableType {
+  taskTableData: taskTableDataType[];
+  value: number;
+}
+
+export interface teamTableDataType {
+  member: taskUser;
+  department: string;
+  lastAction: string;
+  dateOfAction: string;
+}
+
+export interface teamTableType {
+  teamTableData: teamTableDataType[];
+  value: number;
+}
