@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export interface EntityDataType {
   id: number;
@@ -10,5 +10,19 @@ export interface EntityDataType {
 }
 export interface EntityType {
   entityData: EntityDataType;
-  onClick?: () => void;
+  modal?: React.ReactNode;
+}
+export interface EntityViewType {
+  infoData: InfoDataType[];
+}
+
+export interface InfoDataType {
+  BeneficialOwner: string;
+  CodeAbbreviation: string;
+  Nationality: string;
+  HeadquartersLocation: string;
+  IndustryType: string;
+  CoreBusiness: string;
+  IncorporationDate: string;
+  LegalForm: string;
 }
