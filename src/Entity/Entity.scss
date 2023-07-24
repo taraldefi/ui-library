@@ -1,41 +1,43 @@
-.entityWrapper {
+.entity--wrapper {
   :hover {
     box-shadow: initial;
   }
+  width: 350px;
   display: flex;
   flex-direction: column;
   padding: 20px 0px 20px 16px;
-  width: fit-content;
   height: fit-content;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   margin-right: 24px;
   margin-bottom: 24px;
-  .entityTopContent {
+  .entity--top--content {
     display: flex;
     padding-bottom: 16px;
     border-bottom: 1px solid #e2e8f0;
-    width: 300px;
 
-    .entityImageContainer {
+    .entity--image--container {
       width: 80px;
       height: 80px;
       contain: content;
       border-radius: 16px;
     }
 
-    .entityTitleBox {
+    .entity--title--box {
+      width: 50%;
       gap: 5px;
       padding: 16px 45px 16px 18px;
       display: flex;
       flex-direction: column;
 
       :nth-child(1) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         font-style: Work Sans;
         font-size: 24px;
         color: #003c6e;
         font-weight: bold;
-        width: max-content;
       }
 
       :nth-child(2) {
@@ -46,10 +48,11 @@
       }
     }
 
-    .optionsContainer {
-      margin-left: auto;
+    .options--container {
+      position: relative;
+      right: 10px;
     }
-    .modalContainer {
+    .modal--container {
       position: absolute;
 
       &.active {
@@ -65,13 +68,13 @@
       }
     }
     .modal {
-      .iconEntityOption {
+      .icon--entity--option {
         opacity: 0.7;
         &.active {
           opacity: 1;
         }
       }
-      .modalMenue {
+      .modal--menue {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -105,7 +108,7 @@
     }
   }
 
-  .bottomContent {
+  .bottom--content {
     :nth-child(3) {
       padding-right: 15px;
     }
