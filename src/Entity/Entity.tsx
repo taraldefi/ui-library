@@ -5,9 +5,9 @@ import './Entity.scss';
 
 export function Entity({ entityData, modal }: EntityType) {
   return (
-    <div className="entity--wrapper">
-      <div className="entity--top--content">
-        <div className="entity--image--container">
+    <div className={'entityWrapper'}>
+      <div className="entityTopContent">
+        <div className="entityImageContainer">
           <img
             className="images"
             src={entityData.image}
@@ -16,22 +16,22 @@ export function Entity({ entityData, modal }: EntityType) {
             height="100%"
           ></img>
         </div>
-        <div className="entity--title--box">
-          <span className="">{entityData.title}</span>
+        <div className="entityTitleBox">
+          <span>{entityData.title}</span>
           <span>55-NB</span>
         </div>
-        <div className="options--container">{modal}</div>
+        <div className="optionsContainer">{modal}</div>
       </div>
-      <div className="bottom--content">
-        <div className="registration--container">
+      <div className="bottomContent">
+        <div className="registrationContainer">
           <span>REGISTRATION NUMBER</span>
           <span>{entityData.registrationNo}</span>
         </div>
-        <div className="product--container">
+        <div className="productContainer">
           <span>PRODUCTS</span>
           <span>{entityData.products}</span>
         </div>
-        <div className="applications--container">
+        <div className="applicationsContainer">
           <span>APPLICATIONS</span>
           <span>{entityData.applications}</span>
         </div>
