@@ -1,20 +1,11 @@
 // Generated with util/create-component.js
 import React from 'react';
-import { MoreVertical } from 'react-feather';
 import { EntityType } from './Entity.types';
 import './Entity.scss';
 
-export function Entity({ entityData, onClick }: EntityType) {
+export function Entity({ entityData, modal }: EntityType) {
   return (
-    <div className="entityWrapper">
-      <div
-        onClick={() => {
-          onClick();
-        }}
-        id="icon"
-      >
-        <MoreVertical></MoreVertical>
-      </div>
+    <div className={'entityWrapper'}>
       <div className="entityTopContent">
         <div className="entityImageContainer">
           <img
@@ -29,6 +20,7 @@ export function Entity({ entityData, onClick }: EntityType) {
           <span>{entityData.title}</span>
           <span>55-NB</span>
         </div>
+        <div className="optionsContainer">{modal}</div>
       </div>
       <div className="bottomContent">
         <div className="registrationContainer">
