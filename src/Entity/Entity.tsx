@@ -17,7 +17,7 @@ export function Entity({ entityData, modal }: EntityType) {
           ></img>
         </div>
         <div className="entity--title--box">
-          <span className="">{entityData.title}</span>
+          <span>{entityData.title}</span>
           <span>55-NB</span>
         </div>
         <div className="options--container">{modal}</div>

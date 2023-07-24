@@ -2,10 +2,10 @@
   :hover {
     box-shadow: initial;
   }
+  width: 350px;
   display: flex;
   flex-direction: column;
   padding: 20px 0px 20px 16px;
-  width: fit-content;
   height: fit-content;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
@@ -15,10 +15,8 @@
     display: flex;
     padding-bottom: 16px;
     border-bottom: 1px solid #e2e8f0;
-    width: 300px;
 
     .entity--image--container {
-      position: fixed;
       width: 80px;
       height: 80px;
       contain: content;
@@ -26,10 +24,9 @@
     }
 
     .entity--title--box {
-      left: 85px;
+      width: 50%;
       gap: 5px;
       padding: 16px 45px 16px 18px;
-      margin-left: 80px;
       display: flex;
       flex-direction: column;
 
@@ -41,7 +38,6 @@
         font-size: 24px;
         color: #003c6e;
         font-weight: bold;
-        width: 65%;
       }
 
       :nth-child(2) {
@@ -53,7 +49,8 @@
     }
 
     .options--container {
-      margin-left: auto;
+      position: relative;
+      right: 10px;
     }
     .modal--container {
       position: absolute;
