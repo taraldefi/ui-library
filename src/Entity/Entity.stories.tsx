@@ -22,4 +22,5 @@ const data = {
 
 EntityCard.args = {
   entityData: data,
+  onClick: () => {},
 };
