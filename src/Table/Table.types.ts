@@ -10,6 +10,7 @@ export interface applicationTableDataType {
 }
 export interface applicationTableType {
   applicationTableData: applicationTableDataType[];
+  onClick?: () => void;
 }
 
 export interface entityTableDataType {
