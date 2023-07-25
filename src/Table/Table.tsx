@@ -32,7 +32,7 @@ export const ReceiptTable: React.FC<receiptTableType> = ({
   <div className="table">
     <table>
       <tbody>
-        <tr className="title--row">
+        <tr>
           {[
             'Transaction Date',
             'Amount',
@@ -40,21 +40,17 @@ export const ReceiptTable: React.FC<receiptTableType> = ({
             'Payment Method',
             'Options',
           ].map((item, index) => {
-            return (
-              <th key={index} className="title--headder">
-                {item}
-              </th>
-            );
+            return <th key={index}>{item}</th>;
           })}
         </tr>
         {receiptTableData.map((item, index) => {
           return (
-            <tr key={index} className="table--content">
-              <td className="app--table--items">{item.transactionDate}</td>
-              <td className="app--table--items">{item.amount}</td>
-              <td className="app--table--items">{item.remainingBalance}</td>
-              <td className="app--table--items">{item.paymentMethod}</td>
-              <td className="app--table--items">
+            <tr key={index}>
+              <td>{item.transactionDate}</td>
+              <td>{item.amount}</td>
+              <td>{item.remainingBalance}</td>
+              <td>{item.paymentMethod}</td>
+              <td>
                 <a href={item.url} attributes-list download>
                   <Printer color="#65768D" />
                 </a>
@@ -73,22 +69,18 @@ export const RepaymentTable: React.FC<repaymentTableType> = ({
   <div className="table">
     <table>
       <tbody>
-        <tr className="title--row">
+        <tr>
           {['Payment', 'Amount', 'Due Date', 'status'].map((item, index) => {
-            return (
-              <th key={index} className="title--headder">
-                {item}
-              </th>
-            );
+            return <th key={index}>{item}</th>;
           })}
         </tr>
         {repaymentTableData.map((item, index) => {
           return (
-            <tr key={index} className="table--content">
-              <td className="app--table--items">{item.paymentId}</td>
-              <td className="app--table--items">{item.amount}</td>
-              <td className="app--table--items">{item.dueDate}</td>
-              <td className="app--table--items">{item.status}</td>
+            <tr key={index}>
+              <td>{item.paymentId}</td>
+              <td>{item.amount}</td>
+              <td>{item.dueDate}</td>
+              <td>{item.status}</td>
             </tr>
           );
         })}
@@ -99,11 +91,12 @@ export const RepaymentTable: React.FC<repaymentTableType> = ({
 
 export const ApplicationTable: React.FC<applicationTableType> = ({
   applicationTableData,
+  onClick,
 }) => (
   <div className="table">
     <table>
       <tbody>
-        <tr className="title--row">
+        <tr>
           {[
             'Application ID',
             'Product',
@@ -113,23 +106,19 @@ export const ApplicationTable: React.FC<applicationTableType> = ({
             'Importer Name',
             'Status',
           ].map((item, index) => {
-            return (
-              <th key={index} className="title--headder">
-                {item}
-              </th>
-            );
+            return <th key={index}>{item}</th>;
           })}
         </tr>
         {applicationTableData.map((item, index) => {
           return (
-            <tr key={index} className="table--content">
-              <td className="app--table--items">{item.applicationId}</td>
-              <td className="app--table--items">{item.product}</td>
-              <td className="app--table--items">{item.dateFrom}</td>
-              <td className="app--table--items">{item.dateTo}</td>
-              <td className="app--table--items">{item.importerId}</td>
-              <td className="app--table--items">{item.importerName}</td>
-              <td className="app--table--items">{item.status}</td>
+            <tr onClick={() => onClick()} key={index}>
+              <td>{item.applicationId}</td>
+              <td>{item.product}</td>
+              <td>{item.dateFrom}</td>
+              <td>{item.dateTo}</td>
+              <td>{item.importerId}</td>
+              <td>{item.importerName}</td>
+              <td>{item.status}</td>
             </tr>
           );
         })}
@@ -142,21 +131,17 @@ export const EntityTable: React.FC<entityTableType> = ({ entityTableData }) => (
   <div className="table">
     <table>
       <tbody>
-        <tr className="status--title">
+        <tr>
           {['Title', 'Issuance Date', 'Maturity Date', 'Facility Amount'].map(
             (item, index) => {
-              return (
-                <th key={index} className="status--title--items">
-                  {item}
-                </th>
-              );
+              return <th key={index}>{item}</th>;
             }
           )}
         </tr>
 
         {entityTableData.map((item, index) => {
           return (
-            <tr className="table--Content" key={index}>
+            <tr key={index}>
               <td className="persons--tab">{item.productTitle}</td>
               <td className="details--tab">{item.issuanceDate}</td>
               <td className="source--tab">{item.maturityDate}</td>
@@ -175,20 +160,16 @@ export const CompanyTable: React.FC<companyTableType> = ({
   <div className="table">
     <table>
       <tbody>
-        <tr className="status--title">
+        <tr>
           {/* <div className="statusTitle"> */}
           {['Persons', 'Details', 'Source', 'Status'].map((item, index) => {
-            return (
-              <th key={index} className="statusTitleItems">
-                {item}
-              </th>
-            );
+            return <th key={index}>{item}</th>;
           })}
           {/* </div> */}
         </tr>
         {companyTableData.map((item, index) => {
           return (
-            <tr className="tableContent" key={index}>
+            <tr key={index}>
               <td className="details--tab">{item.persons}</td>
               <td className="persons--tab">{item.details}</td>
               <td className="source--tab">
@@ -222,20 +203,16 @@ export const ScreeningTable: React.FC<screeningTableType> = ({
   <div className="table">
     <table>
       <tbody>
-        <tr className="status--title">
+        <tr>
           {/* <div className="statusTitle"> */}
           {['Persons', 'Hit', 'Source', 'Options'].map((item, index) => {
-            return (
-              <th key={index} className="statusTitleItems">
-                {item}
-              </th>
-            );
+            return <th key={index}>{item}</th>;
           })}
           {/* </div> */}
         </tr>
         {screeningTableData.map((item, index) => {
           return (
-            <tr className="tableContent" key={index}>
+            <tr key={index}>
               <td className="details--tab">{item.persons}</td>
               <td className="hit--tab">{item.Hit}</td>
               <td className="source--tab">
@@ -261,7 +238,7 @@ export const PersonsTable: React.FC<personsTableType> = ({
   <div className={'table'}>
     <table>
       <tbody>
-        <tr className="status--title">
+        <tr>
           {[
             'Persons',
             'Email',
@@ -327,7 +304,7 @@ export const ResearchTable: React.FC<researchTableType> = ({
   <div className="table">
     <table>
       <tbody>
-        <tr className="status--title">
+        <tr>
           {/* <div className="statusTitle"> */}
           {['Persons', 'Hit', 'Source', 'Options'].map((item, index) => {
             return <th key={index}>{item}</th>;
@@ -538,7 +515,7 @@ export const TaskTable: React.FC<taskTableType> = ({
   taskTableData,
   value,
 }) => {
-  const [toggle, setToggle] = React.useState(true);
+  const [toggle, setToggle] = React.useState(false);
 
   return (
     <>
@@ -675,7 +652,7 @@ export const TeamTable: React.FC<teamTableType> = ({
   teamTableData,
   value,
 }) => {
-  const [Teamtoggle, setTeamToggle] = React.useState(true);
+  const [Teamtoggle, setTeamToggle] = React.useState(false);
 
   return (
     <>
