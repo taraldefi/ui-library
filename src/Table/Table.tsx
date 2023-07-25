@@ -91,7 +91,7 @@ export const RepaymentTable: React.FC<repaymentTableType> = ({
 
 export const ApplicationTable: React.FC<applicationTableType> = ({
   applicationTableData,
-  onClick,
+  onClick = () => {},
 }) => (
   <div className="table">
     <table>
@@ -111,7 +111,7 @@ export const ApplicationTable: React.FC<applicationTableType> = ({
         </tr>
         {applicationTableData.map((item, index) => {
           return (
-            <tr onClick={() => onClick()} key={index}>
+            <tr onClick={() => onClick(item.applicationId)} key={index}>
               <td>{item.applicationId}</td>
               <td>{item.product}</td>
               <td>{item.dateFrom}</td>
