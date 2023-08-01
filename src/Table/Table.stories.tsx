@@ -15,6 +15,7 @@ import {
 	SignOffTable,
 	TaskTable,
 	TeamTable,
+	TxFinanceTable,
 } from './Table';
 import {
 	ApplicationTableData,
@@ -31,6 +32,7 @@ import {
 	SignoffTabelData,
 	TaskTableData,
 	TeamTableData,
+	TxTableData,
 } from './data/data';
 export default {
 	title: 'Table',
@@ -86,3 +88,5 @@ export const team = () => (
 export const quantitative = () => (
 	<QuantitativeTable quantitativeTableData={QuantitativeData} />
 );
+
+export const txTable = () => <TxFinanceTable txTableData={TxTableData} />;
