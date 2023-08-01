@@ -16,6 +16,7 @@ import {
 	TaskTable,
 	TeamTable,
 	QuantitativeTable,
+	TxFinanceTable,
 } from './Table';
 import { DeleteModal } from './Modals';
 import { Entity } from './Entity';
@@ -42,6 +43,7 @@ export {
 	TaskTable,
 	TeamTable,
 	QuantitativeTable,
+	TxFinanceTable,
 	SmallLoanCard,
 	LargeLoanCard,
 	PaymentSuccessCard,

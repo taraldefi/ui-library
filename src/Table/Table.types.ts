@@ -176,3 +176,15 @@ export interface quantitativeTableDataType {
 export interface quantitativeTableType {
 	quantitativeTableData: quantitativeTableDataType[];
 }
+
+export interface txTableType {
+	txTableData: txTableDataType;
+}
+export interface txTableDataType {
+	[key: string]: txTableValueType;
+}
+export interface txTableValueType {
+	downpayment: number;
+	principalrepayment: number;
+	interestpayment: number;
+}

@@ -24,6 +24,7 @@ import {
 	taskTableType,
 	teamTableType,
 	quantitativeTableType,
+	txTableType,
 } from './Table.types';
 import './Table.scss';
 import { MetricRange, ProgressBar, StatusWidget } from '../Widgets';
@@ -869,3 +870,58 @@ export const TeamTable: React.FC<teamTableType> = ({
 		</>
 	);
 };
+
+export const TxFinanceTable: React.FC<txTableType> = ({ txTableData }) => (
+	<div className='tx--finance'>
+		<div className='join--table'>
+			<div className='header--column'>
+				<div className='txtable--title'>Time</div>
+				{[
+					'Down Payment',
+					'Principal Repayment',
+					'Interest Repayment',
+					'Total Payment',
+				].map((item, index) => {
+					return (
+						<div className='header--column--item' key={index}>
+							{item}
+						</div>
+					);
+				})}
+			</div>
+
+			<div className='table--content'>
+				{Object.keys(txTableData).map((key, index) => {
+					return (
+						<div className='table--column--item' key={index}>
+							<div className='content--title'>
+								{Object.keys(txTableData)[index]}
+							</div>
+							{Object.keys(txTableData[key]).map(
+								(item, index) => {
+									return (
+										<div className='items' key={index}>
+											{txTableData[key][`${item}`] ==
+											0 ? (
+												'...'
+											) : (
+												<div id='euro'>
+													{
+														txTableData[key][
+															`${item}`
+														]
+													}{' '}
+													€
+												</div>
+											)}
+										</div>
+									);
+								},
+							)}
+						</div>
+					);
+				})}
+			</div>
+		</div>
+	</div>
+);
